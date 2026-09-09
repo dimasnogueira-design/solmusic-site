@@ -1,0 +1,10 @@
+/* Visual assets recortados diretamente do MASTER VISUAL aprovado */
+.cat{background-image:url('assets/categories-strip.webp')!important;background-repeat:no-repeat!important;background-size:957px 155px!important;background-color:#111!important}
+.cat:before{display:none!important}
+.c1{background-position:0 0!important}.c2{background-position:-137px 0!important}.c3{background-position:-274px 0!important}.c4{background-position:-411px 0!important}.c5{background-position:-548px 0!important}.c6{background-position:-685px 0!important}.c7{background-position:-822px 0!important}
+.cat b,.cat small{position:relative;z-index:2;text-shadow:0 2px 6px #000}
+.promo,.club{background-image:url('assets/promo-strip.webp')!important;background-repeat:no-repeat!important;background-size:957px 150px!important}
+.promo{background-position:left top!important}.club{background-position:right top!important}
+.promo:after,.club:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.08),rgba(0,0,0,.04));pointer-events:none}
+.duo article{position:relative}.duo article>*{position:relative;z-index:2}
+@media(max-width:650px){.cat{background-size:auto 155px!important}.promo,.club{background-size:auto 150px!important}}
