@@ -1,3 +1,4 @@
+@import url('visual-assets.css');
 /* MASTER VISUAL v1 — header + hero + primeira dobra */
 :root{--sm-yellow:#ffc928;--sm-black:#05090c;--sm-white:#f5f5f2}
 body{background:#071018}
