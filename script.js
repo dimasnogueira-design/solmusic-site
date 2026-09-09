@@ -1,6 +1,28 @@
 const WA="https://wa.me/5500000000000";
 const IG="https://www.instagram.com/lojasolmusic/";
-const carouselCss=document.createElement("link");carouselCss.rel="stylesheet";carouselCss.href="carousel.css";document.head.appendChild(carouselCss);
+
+["carousel.css","mobile-header.css"].forEach(href=>{const link=document.createElement("link");link.rel="stylesheet";link.href=href;document.head.appendChild(link)});
+
+// Header mobile: arquitetura própria, preservando o desktop.
+const siteHeader=document.querySelector(".site-header");
+if(siteHeader){
+  const top=siteHeader.querySelector(".top");
+  if(top){
+    const mobileActions=document.createElement("div");
+    mobileActions.className="mobile-head-actions";
+    mobileActions.innerHTML=`<div class="left"><button class="mobile-icon mobile-menu-btn" type="button" aria-label="Abrir menu">☰</button></div><div class="right"><button class="mobile-icon mobile-search-btn" type="button" aria-label="Buscar">⌕</button><a class="mobile-icon" href="#" aria-label="Favoritos">♡</a><a class="mobile-icon cart" href="#" aria-label="Carrinho">⌑<span class="m-badge">0</span></a></div>`;
+    top.appendChild(mobileActions);
+  }
+  const drawer=document.createElement("aside");drawer.className="mobile-drawer";drawer.setAttribute("aria-label","Menu principal");
+  drawer.innerHTML=`<div class="mobile-drawer-head"><img src="assets/solmusic-logo.webp" alt="SolMusic"><button class="mobile-drawer-close" type="button" aria-label="Fechar menu">×</button></div><nav><a href="#cats">Instrumentos</a><a href="#cats">Áudio</a><a href="#cats">Acessórios</a><a href="#brands">Marcas</a><a href="#products">Usados</a><a href="#offers">Ofertas</a><a href="#club">SolMusic Club</a><a href="#reels">Conteúdo</a><a href="#footer">A Loja</a></nav><div class="account-links"><a href="#">Minha conta</a><a href="#">Favoritos</a></div><a class="drawer-wa" href="${WA}" target="_blank" rel="noopener">FALAR NO WHATSAPP</a>`;
+  const backdrop=document.createElement("button");backdrop.className="mobile-drawer-backdrop";backdrop.type="button";backdrop.setAttribute("aria-label","Fechar menu");
+  document.body.append(backdrop,drawer);
+  const closeMenu=()=>document.body.classList.remove("mobile-menu-open");
+  siteHeader.querySelector(".mobile-menu-btn")?.addEventListener("click",()=>document.body.classList.add("mobile-menu-open"));
+  drawer.querySelector(".mobile-drawer-close")?.addEventListener("click",closeMenu);backdrop.addEventListener("click",closeMenu);drawer.querySelectorAll("a").forEach(a=>a.addEventListener("click",closeMenu));
+  siteHeader.querySelector(".mobile-search-btn")?.addEventListener("click",()=>siteHeader.querySelector(".search input")?.focus());
+}
+
 const oldHero=document.querySelector("section.hero");
 if(oldHero){
  const hero=document.createElement("section");hero.className="hero-carousel";hero.setAttribute("aria-label","Destaques SolMusic");
