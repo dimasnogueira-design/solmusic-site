@@ -1,8 +1,6 @@
 const WA="https://wa.me/5500000000000";
 const IG="https://www.instagram.com/lojasolmusic/";
 
-// Etapa HERO: mantém o header atual e substitui somente o banner antigo
-// pelos quatro banners aprovados da SolMusic.
 const carouselCss=document.createElement("link");
 carouselCss.rel="stylesheet";
 carouselCss.href="carousel.css";
@@ -17,9 +15,21 @@ if(oldHero){
     <div class="carousel-track">
       <a class="carousel-slide is-active" href="#products" aria-label="Tagima Signature Edu Ardanuy">
         <img src="assets/banner-tagima.webp" alt="Tagima Signature Edu Ardanuy — destaque SolMusic" fetchpriority="high">
+        <div class="hero-overlay">
+          <span class="hero-kicker">TAGIMA SIGNATURE • EDU ARDANUY</span>
+          <h2>FEITA PARA<br><strong>GRANDES HISTÓRIAS.</strong></h2>
+          <p>Superstrato de assinatura com atitude, performance e identidade própria.</p>
+          <span class="hero-cta">VER DETALHES →</span>
+        </div>
       </a>
       <a class="carousel-slide" href="#products" aria-label="Tagima Almach e Sixmart">
         <img src="assets/banner-trio.webp" alt="Tagima Almach e Sixmart — destaque SolMusic" loading="eager">
+        <div class="hero-overlay">
+          <span class="hero-kicker">TAGIMA • ALMACH • SIXMART</span>
+          <h2>TRÊS FORMAS DE<br><strong>ENCONTRAR SEU SOM.</strong></h2>
+          <p>Almach com construção clássica. Sixmart com delay, reverb, overdrive e distortion integrados.</p>
+          <span class="hero-cta">CONHEÇA OS MODELOS →</span>
+        </div>
       </a>
       <a class="carousel-slide" href="#products" aria-label="SKP Pro Audio Q12 MK2">
         <img src="assets/banner-skp.webp" alt="SKP Pro Audio Q12 MK2 — destaque SolMusic" loading="eager">
