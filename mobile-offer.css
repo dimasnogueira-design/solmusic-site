@@ -1,17 +1,62 @@
 @media(max-width:700px){
-  #offers.promo{min-height:390px!important;height:auto!important;border-radius:18px!important;margin-top:8px!important;padding:0!important;overflow:hidden!important;position:relative!important;background:#090d10!important;background-image:none!important;color:#fff!important;isolation:isolate!important;box-shadow:0 16px 36px rgba(0,0,0,.16)!important}
-  #offers.promo:before{content:"";position:absolute!important;z-index:-1!important;inset:0!important;background:radial-gradient(circle at 85% 20%,rgba(255,199,38,.18),transparent 28%),linear-gradient(135deg,#090d10 0%,#111820 58%,#06090b 100%)!important}
-  #offers.promo:after{content:""!important;position:absolute!important;z-index:-1!important;width:240px!important;height:240px!important;right:-95px!important;bottom:-80px!important;border:1px solid rgba(255,201,40,.18)!important;border-radius:50%!important;background:radial-gradient(circle,rgba(255,201,40,.12),transparent 66%)!important}
-  #offers .promo-content{padding:34px 28px 30px!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;min-height:390px!important}
-  #offers .promo-content .kicker{font-size:11px!important;font-weight:900!important;letter-spacing:3.2px!important;color:#ffc928!important;margin:0 0 30px!important}
-  #offers .promo-content p{order:3!important;margin:4px 0 0!important;font-size:15px!important;font-weight:600!important;color:#d5d9dc!important;text-transform:none!important}
-  #offers .promo-content p:before{content:"Use o cupom ";}
-  #offers .promo-content p{font-size:0!important}
-  #offers .promo-content p:after{content:"SOL10";font-size:15px!important;font-weight:900!important;color:#ffc928!important}
-  #offers .promo-content strong{order:2!important;font-size:0!important;line-height:1!important;margin:0!important;border:0!important;padding:0!important;color:#fff!important}
-  #offers .promo-content strong:after{content:"10% OFF";font-size:58px!important;line-height:.95!important;font-weight:950!important;letter-spacing:-3px!important;color:#fff!important}
-  #offers .promo-content h3{display:none!important}
-  #offers .promo-content small{order:4!important;margin:9px 0 28px!important;font-size:11px!important;letter-spacing:1.2px!important;font-weight:700!important;color:#9ca5ab!important}
-  #offers .promo-content .btn{order:5!important;width:100%!important;min-height:56px!important;margin-top:auto!important;border-radius:10px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;padding:0 20px!important;font-size:13px!important;font-weight:900!important;background:#ffc928!important;color:#080b0d!important;box-shadow:none!important}
+  #offers.promo{
+    min-height:0!important;
+    height:auto!important;
+    aspect-ratio:16/9!important;
+    border-radius:18px!important;
+    margin-top:8px!important;
+    padding:0!important;
+    overflow:hidden!important;
+    position:relative!important;
+    background:#090d10 url('61D26D7C-5642-4CB3-B9C7-6FB84F89A3B2.png') center center/cover no-repeat!important;
+    color:#fff!important;
+    box-shadow:0 16px 36px rgba(0,0,0,.16)!important;
+  }
+  #offers.promo:before,#offers.promo:after{display:none!important}
+  #offers .promo-content{
+    position:absolute!important;
+    inset:0!important;
+    min-height:0!important;
+    padding:0!important;
+    margin:0!important;
+    display:block!important;
+  }
+  #offers .promo-content .kicker,
+  #offers .promo-content p,
+  #offers .promo-content strong,
+  #offers .promo-content h3,
+  #offers .promo-content small{
+    position:absolute!important;
+    width:1px!important;
+    height:1px!important;
+    padding:0!important;
+    margin:-1px!important;
+    overflow:hidden!important;
+    clip:rect(0,0,0,0)!important;
+    white-space:nowrap!important;
+    border:0!important;
+  }
+  #offers .promo-content p:before,
+  #offers .promo-content p:after,
+  #offers .promo-content strong:after{content:none!important}
+  #offers .promo-content .btn{
+    position:absolute!important;
+    inset:0!important;
+    width:100%!important;
+    height:100%!important;
+    min-height:0!important;
+    margin:0!important;
+    padding:0!important;
+    border:0!important;
+    border-radius:18px!important;
+    background:transparent!important;
+    box-shadow:none!important;
+    color:transparent!important;
+    font-size:0!important;
+    opacity:1!important;
+  }
 }
-@media(max-width:390px){#offers.promo,#offers .promo-content{min-height:360px!important}#offers .promo-content{padding:28px 22px 24px!important}#offers .promo-content strong:after{font-size:50px!important}}
+@media(max-width:390px){
+  #offers.promo{aspect-ratio:16/9!important;border-radius:15px!important}
+  #offers .promo-content .btn{border-radius:15px!important}
+}
