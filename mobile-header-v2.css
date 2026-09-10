@@ -1,0 +1,30 @@
+@media(max-width:700px){
+  .mobile-rating-bar{height:42px;display:flex;align-items:center;justify-content:center;gap:7px;background:#171717;color:#fff;border-bottom:1px solid #222;font-size:12px;letter-spacing:.1px}
+  .mobile-rating-bar .rating-stars{color:#ffc928;font-size:15px;letter-spacing:1px;line-height:1}
+  .mobile-rating-bar strong{font-size:13px}
+  .mobile-rating-bar .rating-google{font-weight:800}
+  .mobile-rating-bar .rating-sep{opacity:.45}
+  .mobile-rating-bar .rating-count{opacity:.82}
+
+  .top{grid-template-columns:1fr auto!important;grid-template-rows:78px 70px!important}
+  .top .logo{grid-column:1!important;justify-self:start!important}
+  .top .logo-img{width:88px!important;height:62px!important}
+  .mobile-head-actions-v2{grid-column:2!important;justify-content:flex-end!important;pointer-events:auto!important;width:auto!important}
+  .mobile-head-actions-v2 .right{gap:6px!important}
+  .mobile-head-actions-v2 .mobile-icon{width:50px!important;height:50px!important;color:#fff!important;background:transparent!important}
+  .mobile-head-actions-v2 svg{width:31px;height:31px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .mobile-head-actions-v2 .cart svg{width:36px;height:32px}
+  .mobile-head-actions-v2 .cart .m-badge{right:-1px!important;top:0!important;background:#e94e45!important;color:#fff!important;box-shadow:0 0 0 2px #030608}
+  .mobile-menu-btn-right::before{content:'☰'!important;font-size:33px!important;color:#fff!important}
+  .search{height:52px!important;margin:0 0 16px!important;border:1px solid #8d969d!important;border-radius:7px!important}
+  .search input{font-size:18px!important}
+  .search button{width:60px!important;font-size:27px!important;background:#fff!important;color:#05090c!important}
+  .nav{min-height:42px!important;gap:24px!important;padding-bottom:10px!important}
+  .nav a{font-size:14px!important;color:#fff!important}
+  .nav a:first-child{color:#fff!important}
+}
+@media(max-width:390px){
+  .mobile-rating-bar{height:39px;font-size:11px;gap:5px}.mobile-rating-bar .rating-stars{font-size:13px}
+  .top{grid-template-rows:72px 66px!important}.top .logo-img{width:80px!important;height:58px!important}
+  .mobile-head-actions-v2 .mobile-icon{width:45px!important;height:45px!important}.mobile-menu-btn-right::before{font-size:30px!important}
+}
