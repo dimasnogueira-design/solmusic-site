@@ -24,7 +24,8 @@ if(siteHeader){
 }
 
 const oldHero=document.querySelector("section.hero");
-if(oldHero){
+const isMobileHero=window.matchMedia("(max-width:700px)").matches;
+if(oldHero&&!isMobileHero){
  const hero=document.createElement("section");hero.className="hero-carousel";hero.setAttribute("aria-label","Destaques SolMusic");
  hero.innerHTML=`<div class="carousel-track">
  <a class="carousel-slide is-active" href="#products" aria-label="Tagima Signature Edu Ardanuy"><img src="assets/banner-tagima.webp" alt="Tagima Signature Edu Ardanuy — destaque SolMusic" fetchpriority="high"><div class="hero-overlay"><span class="hero-kicker">TAGIMA SIGNATURE • EDU ARDANUY</span><h2>FEITA PARA<br><strong>GRANDES HISTÓRIAS.</strong></h2><p>Performance, identidade e atitude em uma Signature feita para quem vive guitarra.</p><span class="hero-cta">VER DETALHES →</span></div></a>
