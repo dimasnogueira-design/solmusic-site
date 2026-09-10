@@ -1,11 +1,9 @@
 (()=>{
   const header=document.querySelector('.site-header');
   if(!header) return;
+
+  /* Mobile header stays focused on shopping/navigation. Social proof lives below the hero. */
   header.querySelector('.mobile-rating-bar')?.remove();
-  const bar=document.createElement('div');
-  bar.className='mobile-rating-bar';
-  bar.innerHTML='<span class="rating-stars">★★★★★</span><strong>5,0 / 5</strong><span class="rating-google">Google</span><span class="rating-sep">•</span><span class="rating-count">150 avaliações</span>';
-  header.prepend(bar);
 
   const top=header.querySelector('.top');
   if(top){
