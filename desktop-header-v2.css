@@ -28,43 +28,41 @@
   .site-header .nav>a:nth-child(6){color:#ff5d55!important;font-weight:800!important}
   .site-header .nav>a:nth-child(7){color:#ffc928!important}
 
-  .desktop-mega-menu{position:absolute!important;left:50%!important;top:100%!important;transform:translateX(-50%) translateY(-8px)!important;width:min(94vw,1520px)!important;background:#fff!important;color:#181b1e!important;border-radius:0 0 8px 8px!important;box-shadow:0 24px 55px rgba(0,0,0,.30)!important;opacity:0!important;visibility:hidden!important;pointer-events:none!important;transition:.18s ease!important;z-index:140!important;overflow:hidden!important;border:1px solid #dcdcdc!important;border-top:0!important}
+  .desktop-mega-menu{position:absolute!important;left:50%!important;top:100%!important;transform:translateX(-50%) translateY(-8px)!important;width:min(94vw,1520px)!important;background:#101316!important;color:#fff!important;border-radius:0 0 8px 8px!important;box-shadow:0 24px 55px rgba(0,0,0,.34)!important;opacity:0!important;visibility:hidden!important;pointer-events:none!important;transition:.18s ease!important;z-index:140!important;overflow:hidden!important;border:1px solid #2a2f34!important;border-top:0!important}
   .desktop-mega-menu.is-open{opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:translateX(-50%) translateY(0)!important}
 
-  .mega-tabs{display:grid!important;grid-template-columns:repeat(7,1fr)!important;background:#efefed!important;border-bottom:1px solid #d6d6d3!important}
-  .mega-tab{min-height:78px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:10px!important;padding:6px 12px!important;border:0!important;border-right:1px solid #d2d2cf!important;font-family:'Inter',Arial,sans-serif!important;font-size:13px!important;font-weight:700!important;color:#202326!important;background:#efefed!important;cursor:pointer!important;position:relative!important}
-  .mega-tab:last-child{border-right:0!important}
-  .mega-tab.is-active{background:#fff!important;color:#111!important;box-shadow:inset 0 -3px 0 #ffc928!important}
+  .mega-tabs{display:grid!important;grid-template-columns:repeat(6,1fr)!important;gap:1px!important;padding:8px!important;background:#0b0d0f!important;border-bottom:1px solid #292d31!important}
+  .mega-tab{position:relative!important;min-height:96px!important;display:block!important;overflow:hidden!important;border:0!important;border-radius:8px!important;padding:0!important;background:#15191c center/cover no-repeat!important;color:#fff!important;cursor:pointer!important;font-size:0!important;isolation:isolate!important;box-shadow:none!important;transition:transform .2s ease,filter .2s ease!important}
   .mega-tab .mi{display:none!important}
-  .mega-tab::before{content:'';width:52px;height:50px;display:block;flex:0 0 52px;background-repeat:no-repeat;background-position:center;background-size:contain;border-radius:7px}
-  .mega-tab:nth-child(1)::before{background-image:url('IMG_4713.png')}
-  .mega-tab:nth-child(2)::before{background-image:url('IMG_4714.png')}
-  .mega-tab:nth-child(3)::before{background-image:url('IMG_4715.png')}
-  .mega-tab:nth-child(4)::before{background-image:url('IMG_4716.png')}
-  .mega-tab:nth-child(5)::before{background-image:url('IMG_4717.png')}
-  .mega-tab:nth-child(6)::before{background-image:url('IMG_4718.png')}
-  .mega-tab:nth-child(7)::before{background-image:url('IMG_4719.png')}
-  .mega-tab:nth-child(5),.mega-tab:nth-child(6),.mega-tab:nth-child(7){font-size:0!important}
-  .mega-tab:nth-child(5)::after{content:'Amplificadores';font-size:13px!important}
-  .mega-tab:nth-child(6)::after{content:'Pedais & Efeitos';font-size:13px!important}
-  .mega-tab:nth-child(7)::after{content:'Áudio';font-size:13px!important}
+  .mega-tab::before{content:''!important;position:absolute!important;inset:0!important;width:auto!important;height:auto!important;display:block!important;background:linear-gradient(180deg,rgba(4,6,8,.08),rgba(4,6,8,.78))!important;border-radius:0!important;z-index:-1!important;transition:.22s ease!important}
+  .mega-tab::after{position:absolute!important;left:16px!important;bottom:13px!important;font-family:'Inter',Arial,sans-serif!important;font-size:14px!important;font-weight:800!important;color:#fff!important;text-shadow:0 2px 12px rgba(0,0,0,.85)!important;white-space:nowrap!important}
+  .mega-tab:nth-child(1){background-image:url('IMG_4713.png')!important}.mega-tab:nth-child(1)::after{content:'Guitarras'!important}
+  .mega-tab:nth-child(2){background-image:url('IMG_4714.png')!important}.mega-tab:nth-child(2)::after{content:'Baixos'!important}
+  .mega-tab:nth-child(3){background-image:url('IMG_4715.png')!important}.mega-tab:nth-child(3)::after{content:'Violões'!important}
+  .mega-tab:nth-child(4){background-image:url('IMG_4716.png')!important}.mega-tab:nth-child(4)::after{content:'Baterias'!important}
+  .mega-tab:nth-child(5){background-image:url('IMG_4717.png')!important}.mega-tab:nth-child(5)::after{content:'Amplificadores'!important}
+  .mega-tab:nth-child(6){display:none!important}
+  .mega-tab:nth-child(7){display:block!important;background-image:url('IMG_4718.png')!important}.mega-tab:nth-child(7)::after{content:'Pedais & Efeitos'!important}
+  .mega-tab:hover,.mega-tab.is-active{transform:translateY(-1px)!important;filter:brightness(1.08)!important;box-shadow:inset 0 -3px 0 #ffc928!important}
+  .mega-tab:hover::before,.mega-tab.is-active::before{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(4,6,8,.52))!important}
 
-  .mega-content{display:grid!important;grid-template-columns:1.05fr 1fr 1fr 1fr 1fr 320px!important;gap:0!important;padding:22px 0 24px!important;background:#fff!important;min-height:390px!important}
-  .mega-col{padding:0 20px!important;border-right:1px solid #ececea!important;background:#fff!important}
-  .mega-col h4{margin:0 0 14px!important;font-family:'Barlow Condensed',Arial,sans-serif!important;font-size:18px!important;line-height:1!important;letter-spacing:.04em!important;text-transform:uppercase!important;color:#d78b00!important;font-weight:800!important}
-  .site-header .nav .desktop-mega-menu .mega-col a{display:block!important;padding:5px 0!important;margin:0!important;font-family:'Inter',Arial,sans-serif!important;font-size:12px!important;line-height:1.4!important;color:#3c4145!important;font-weight:500!important;border:0!important;height:auto!important;min-height:0!important;justify-content:flex-start!important;background:transparent!important;text-decoration:none!important;white-space:normal!important}
-  .site-header .nav .desktop-mega-menu .mega-col a:hover{color:#000!important;text-decoration:underline!important;background:transparent!important;border:0!important}
+  .mega-content{display:grid!important;grid-template-columns:1.05fr 1fr 1fr 1fr 1fr 320px!important;gap:0!important;padding:22px 0 24px!important;background:#101316!important;min-height:390px!important}
+  .mega-col{padding:0 20px!important;border-right:1px solid #2a2e32!important;background:#101316!important}
+  .mega-col h4{margin:0 0 14px!important;font-family:'Barlow Condensed',Arial,sans-serif!important;font-size:18px!important;line-height:1!important;letter-spacing:.04em!important;text-transform:uppercase!important;color:#ffc928!important;font-weight:800!important}
+  .site-header .nav .desktop-mega-menu .mega-col a{display:block!important;padding:5px 0!important;margin:0!important;font-family:'Inter',Arial,sans-serif!important;font-size:12px!important;line-height:1.4!important;color:#e7e9ea!important;font-weight:500!important;border:0!important;height:auto!important;min-height:0!important;justify-content:flex-start!important;background:transparent!important;text-decoration:none!important;white-space:normal!important}
+  .site-header .nav .desktop-mega-menu .mega-col a:hover{color:#ffc928!important;text-decoration:none!important;background:transparent!important;border:0!important}
+  .mega-col:first-child a:nth-of-type(1)::before{content:'→ ';color:#ffc928;font-weight:900}
+  .mega-col:first-child a:nth-of-type(4){color:#ffc928!important;font-weight:800!important}
 
-  .mega-promos{padding:0 16px!important;display:flex!important;flex-direction:column!important;gap:12px!important;background:#fff!important}
-  .site-header .nav .desktop-mega-menu .mega-promo{position:relative!important;display:flex!important;min-height:128px!important;border-radius:7px!important;overflow:hidden!important;background:#111!important;color:#fff!important;padding:18px!important;border:0!important;height:auto!important;justify-content:flex-start!important;align-items:flex-end!important;background-size:cover!important;background-position:center!important;text-decoration:none!important}
-  .mega-promo::before{content:''!important;position:absolute!important;inset:0!important;background:linear-gradient(90deg,rgba(0,0,0,.86),rgba(0,0,0,.18))!important}
+  .mega-promos{padding:0 16px!important;display:flex!important;flex-direction:column!important;gap:12px!important;background:#101316!important}
+  .site-header .nav .desktop-mega-menu .mega-promo{position:relative!important;display:flex!important;min-height:138px!important;border-radius:7px!important;overflow:hidden!important;background:#111!important;color:#fff!important;padding:18px!important;border:1px solid #2a2e32!important;height:auto!important;justify-content:flex-start!important;align-items:flex-end!important;background-size:cover!important;background-position:center!important;text-decoration:none!important}
+  .mega-promo::before{content:''!important;position:absolute!important;inset:0!important;background:linear-gradient(90deg,rgba(0,0,0,.84),rgba(0,0,0,.18))!important}
   .mega-promo span{position:relative!important;z-index:2!important;display:block!important;font-family:'Barlow Condensed',Arial,sans-serif!important;font-size:22px!important;line-height:.95!important;text-transform:uppercase!important;font-weight:800!important;max-width:160px!important;color:#fff!important}
   .mega-promo small{position:relative!important;z-index:2!important;display:block!important;margin-top:6px!important;font-size:10px!important;color:#fff!important}
   .mega-promo.one{background-image:url('IMG_4713.png')!important}
-  .mega-promo.two{background-image:url('tagima-edu-ardanuy-signature-solmusic-banner-v8-desktop.png')!important}
+  .mega-promo.two{background-image:url('tagima-edu-ardanuy-signature-solmusic-banner-v8-desktop.png')!important;background-position:center!important}
 
   .hero,.hero-carousel{display:none!important}
-
   .trust{background:#f4f4f2!important;color:#171a1d!important;border-bottom:1px solid #ddd!important}
   .trust-grid{width:min(94%,1500px)!important;min-height:54px!important;grid-template-columns:repeat(5,1fr)!important;font-family:'Inter',Arial,sans-serif!important;font-size:10px!important;font-weight:700!important}
   .trust-grid span{min-height:34px!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:0 14px!important;border-right:1px solid #dedede!important}
@@ -81,7 +79,5 @@
   .site-header .nav>a{padding:0 13px!important;font-size:11px!important}
   .mega-content{grid-template-columns:1fr 1fr 1fr 1fr 1fr 270px!important}
   .mega-col{padding:0 14px!important}
-  .mega-tab{gap:7px!important;padding:4px 7px!important}
-  .mega-tab::before{width:44px;height:42px;flex-basis:44px}
-  .mega-tab:nth-child(5)::after,.mega-tab:nth-child(6)::after,.mega-tab:nth-child(7)::after{font-size:11px!important}
+  .mega-tab::after{left:12px!important;font-size:12px!important}
 }
