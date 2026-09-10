@@ -40,6 +40,28 @@ if(oldHero&&!isMobileHero){
  hero.querySelector(".carousel-prev").addEventListener("click",e=>{e.preventDefault();show(current-1);start()});hero.querySelector(".carousel-next").addEventListener("click",e=>{e.preventDefault();show(current+1);start()});dots.forEach((dot,i)=>dot.addEventListener("click",()=>{show(i);start()}));hero.addEventListener("mouseenter",()=>clearInterval(timer));hero.addEventListener("mouseleave",start);
  let touchX=null;hero.addEventListener("touchstart",e=>{touchX=e.changedTouches[0].clientX},{passive:true});hero.addEventListener("touchend",e=>{if(touchX===null)return;const dx=e.changedTouches[0].clientX-touchX;if(Math.abs(dx)>45){show(current+(dx<0?1:-1));start()}touchX=null},{passive:true});start();
 }
+
+// Carrossel mobile: autoplay, swipe e setas discretas.
+const mobileCarousel=document.querySelector('.mobile-banner-carousel');
+if(mobileCarousel){
+  const track=mobileCarousel.querySelector('.mobile-banner-track');
+  const slides=[...mobileCarousel.querySelectorAll('.mobile-banner-slide')];
+  const dots=[...mobileCarousel.querySelectorAll('.mobile-banner-dots button')];
+  const prev=document.createElement('button');prev.className='mobile-banner-arrow mobile-banner-prev';prev.type='button';prev.setAttribute('aria-label','Banner anterior');prev.textContent='‹';
+  const next=document.createElement('button');next.className='mobile-banner-arrow mobile-banner-next';next.type='button';next.setAttribute('aria-label','Próximo banner');next.textContent='›';
+  mobileCarousel.append(prev,next);
+  let current=0,timer,scrollTimer;
+  const go=index=>{current=(index+slides.length)%slides.length;track.scrollTo({left:current*track.clientWidth,behavior:'smooth'});dots.forEach((d,i)=>d.classList.toggle('active',i===current));};
+  const start=()=>{clearInterval(timer);timer=setInterval(()=>go(current+1),5200)};
+  const sync=()=>{clearTimeout(scrollTimer);scrollTimer=setTimeout(()=>{const i=Math.round(track.scrollLeft/track.clientWidth);if(i!==current){current=i;dots.forEach((d,n)=>d.classList.toggle('active',n===current));start()}},90)};
+  track.addEventListener('scroll',sync,{passive:true});
+  dots.forEach((d,i)=>d.addEventListener('click',()=>{go(i);start()}));
+  prev.addEventListener('click',()=>{go(current-1);start()});next.addEventListener('click',()=>{go(current+1);start()});
+  track.addEventListener('touchstart',()=>clearInterval(timer),{passive:true});track.addEventListener('touchend',start,{passive:true});
+  document.addEventListener('visibilitychange',()=>{if(document.hidden)clearInterval(timer);else start()});
+  start();
+}
+
 const products=[["Tagima Signature","Série Especial","R$ 3.590,00","p1"],["Fender","Player Stratocaster","R$ 5.990,00","p2"],["LTD","EC-256","R$ 4.290,00","p3"],["S by Solar","A2.6C","R$ 3.990,00","p4"],["Takamine","GD11MCE","R$ 2.690,00","p5"]];
 document.querySelectorAll("[data-wa]").forEach(a=>{a.href=WA+"?text="+encodeURIComponent("Olá! Vim pelo site da SolMusic e gostaria de falar com um especialista.");a.target="_blank";a.rel="noopener"});document.querySelectorAll(".reelgrid a").forEach(a=>{a.href=IG;a.rel="noopener"});
 const grid=document.getElementById("grid");if(grid)grid.innerHTML=products.map(p=>`<article class="card"><button class="heart" aria-label="Favoritar">♡</button><div class="pic ${p[3]}"></div><div class="body"><h3>${p[0]}</h3><small>${p[1]}</small><div class="price">${p[2]}</div><small>à vista no Pix</small><div class="actions"><a href="#">Comprar →</a><a target="_blank" rel="noopener" href="${WA}?text=${encodeURIComponent("Olá! Vi no site "+p[0]+" "+p[1]+". Está disponível?")}">◉ WhatsApp</a></div></div></article>`).join("");
