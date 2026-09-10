@@ -3,19 +3,25 @@
 @media(min-width:1001px){
   body{font-family:'Inter',Arial,sans-serif!important}
   .site-header{position:sticky;top:0;z-index:100;background:#050708!important;border:0!important;box-shadow:0 4px 18px rgba(0,0,0,.18)}
-  .site-header .top{width:min(94%,1540px)!important;min-height:92px!important;display:grid!important;grid-template-columns:260px minmax(440px,1fr) auto!important;gap:28px!important;align-items:center!important;padding:13px 0!important}
-  .site-header .logo{gap:14px!important;display:flex!important;align-items:center!important}
-  .site-header .logo-img{width:76px!important;height:76px!important;object-fit:contain!important;filter:drop-shadow(0 4px 10px rgba(0,0,0,.28))}
-  .site-header .logo-copy small{font-family:'Inter',Arial,sans-serif!important;font-size:8px!important;line-height:1.45!important;letter-spacing:3.8px!important;font-weight:800!important;color:#fff!important}
-  .site-header .search{max-width:none!important;width:100%!important;height:50px!important;border-radius:8px!important;background:#fff!important;justify-self:stretch!important;box-shadow:0 0 0 1px rgba(255,255,255,.12)!important;overflow:hidden!important}
+  .site-header .top{width:min(94%,1540px)!important;min-height:92px!important;display:grid!important;grid-template-columns:280px minmax(440px,1fr) auto!important;gap:28px!important;align-items:center!important;padding:12px 0!important}
+
+  /* LOGO HORIZONTAL — igual à direção aprovada no mockup */
+  .site-header .logo{gap:12px!important;display:flex!important;align-items:center!important;min-width:0!important;text-decoration:none!important}
+  .site-header .logo-img{width:62px!important;height:62px!important;object-fit:contain!important;flex:0 0 62px!important;filter:drop-shadow(0 4px 10px rgba(0,0,0,.28))}
+  .site-header .logo-copy{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;line-height:1!important;min-width:0!important}
+  .site-header .logo-copy small{font-size:0!important;line-height:1!important;letter-spacing:0!important;color:transparent!important;width:auto!important;height:auto!important;overflow:visible!important;white-space:nowrap!important}
+  .site-header .logo-copy small::before{content:'SolMusic';display:block;color:#f7f7f2!important;font-family:'Inter',Arial,sans-serif!important;font-size:31px!important;line-height:.98!important;font-weight:800!important;letter-spacing:-1.7px!important;text-transform:none!important;text-shadow:0 2px 8px rgba(0,0,0,.3)!important}
+  .site-header .logo-copy small::after{content:'MÚSICA INSPIRA PESSOAS';display:block;color:#f2f2ee!important;font-family:'Inter',Arial,sans-serif!important;font-size:7px!important;line-height:1!important;font-weight:700!important;letter-spacing:3.25px!important;margin-top:8px!important;white-space:nowrap!important}
+
+  .site-header .search{max-width:none!important;width:100%!important;height:50px!important;border-radius:26px!important;background:#fff!important;justify-self:stretch!important;box-shadow:0 0 0 1px rgba(255,255,255,.12)!important;overflow:hidden!important}
   .site-header .search input{padding:0 20px!important;font-family:'Inter',Arial,sans-serif!important;font-size:13px!important;font-weight:500!important;color:#191c1f!important;background:#fff!important}
   .site-header .search input::placeholder{color:#777d82!important}
-  .site-header .search button{width:60px!important;font-size:22px!important;color:#111!important;background:#fff!important;border-left:1px solid #ececec!important}
+  .site-header .search button{width:60px!important;font-size:22px!important;color:#111!important;background:#fff!important;border-left:0!important}
   .site-header .tools{gap:18px!important;font-family:'Inter',Arial,sans-serif!important;font-size:11px!important;font-weight:700!important;color:#fff!important}
   .site-header .tools>a.desktop-only{display:inline-flex!important;align-items:center!important;min-height:38px!important;transition:color .18s ease!important;white-space:nowrap!important}
   .site-header .tools>a.desktop-only:hover{color:#ffc928!important}
   .site-header .theme{display:none!important}
-  .site-header .topwa{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:46px!important;padding:0 20px!important;border-radius:7px!important;background:#ffc928!important;color:#090b0d!important;font-family:'Inter',Arial,sans-serif!important;font-size:11px!important;font-weight:800!important;box-shadow:0 8px 20px rgba(255,201,40,.12)!important;white-space:nowrap!important}
+  .site-header .topwa{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:46px!important;padding:0 20px!important;border-radius:9px!important;background:#ffc928!important;color:#090b0d!important;font-family:'Inter',Arial,sans-serif!important;font-size:11px!important;font-weight:800!important;box-shadow:0 8px 20px rgba(255,201,40,.12)!important;white-space:nowrap!important}
 
   .site-header .nav{width:100%!important;max-width:none!important;min-height:55px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:0!important;padding:0 4%!important;background:#07090b!important;color:#fff!important;border-top:1px solid #1d2226!important;border-bottom:1px solid #20252a!important;overflow:visible!important;position:relative!important}
   .site-header .nav a{height:54px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;padding:0 21px!important;font-family:'Inter',Arial,sans-serif!important;font-size:12px!important;font-weight:700!important;white-space:nowrap!important;color:#fff!important;transition:background .18s ease,color .18s ease!important;border-bottom:2px solid transparent!important}
@@ -36,7 +42,7 @@
   .mega-col a:hover{color:#000!important;text-decoration:underline!important;background:transparent!important;border:0!important}
   .mega-promos{padding:0 16px!important;display:flex!important;flex-direction:column!important;gap:12px!important}
   .mega-promo{position:relative!important;display:block!important;min-height:128px!important;border-radius:7px!important;overflow:hidden!important;background:#111!important;color:#fff!important;padding:18px!important;border:0!important;height:auto!important;justify-content:flex-start!important;align-items:flex-end!important;background-size:cover!important;background-position:center!important}
-  .mega-promo::before{content:""!important;position:absolute!important;inset:0!important;background:linear-gradient(90deg,rgba(0,0,0,.86),rgba(0,0,0,.18))!important}
+  .mega-promo::before{content:''!important;position:absolute!important;inset:0!important;background:linear-gradient(90deg,rgba(0,0,0,.86),rgba(0,0,0,.18))!important}
   .mega-promo span{position:relative!important;z-index:2!important;display:block!important;font-family:'Barlow Condensed',Arial,sans-serif!important;font-size:22px!important;line-height:.95!important;text-transform:uppercase!important;font-weight:800!important;max-width:150px!important}
   .mega-promo small{position:relative!important;z-index:2!important;display:block!important;margin-top:6px!important;font-size:10px!important;color:#fff!important}
   .mega-promo.one{background-image:url('IMG_4713.png')!important}
@@ -51,9 +57,10 @@
 }
 
 @media(min-width:1001px) and (max-width:1250px){
-  .site-header .top{grid-template-columns:210px minmax(330px,1fr) auto!important;gap:16px!important}
-  .site-header .logo-img{width:64px!important;height:64px!important}
-  .site-header .logo-copy small{font-size:7px!important;letter-spacing:2.7px!important}
+  .site-header .top{grid-template-columns:230px minmax(330px,1fr) auto!important;gap:16px!important}
+  .site-header .logo-img{width:56px!important;height:56px!important;flex-basis:56px!important}
+  .site-header .logo-copy small::before{font-size:27px!important}
+  .site-header .logo-copy small::after{font-size:6px!important;letter-spacing:2.4px!important}
   .site-header .tools{gap:10px!important;font-size:10px!important}
   .site-header .topwa{padding:0 13px!important}
   .site-header .nav a{padding:0 13px!important;font-size:11px!important}
