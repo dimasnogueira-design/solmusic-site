@@ -1,0 +1,16 @@
+@media(max-width:700px){
+  #cats.catalog{padding-top:26px!important}
+  #cats .section-head{display:block!important;text-align:center!important;margin-bottom:18px!important}
+  #cats .section-head h2{font-size:22px!important;letter-spacing:.2px!important;text-transform:none!important}
+  #cats .section-head h2::after{content:"Explore por categorias";font-size:0}
+  #cats .section-head>a{display:none!important}
+  #cats .cats{display:flex!important;gap:14px!important;overflow-x:auto!important;scroll-snap-type:x mandatory!important;scroll-padding:18px!important;padding:0 18px 16px!important;margin:0 -3%!important;scrollbar-width:none!important;-webkit-overflow-scrolling:touch}
+  #cats .cats::-webkit-scrollbar{display:none}
+  #cats .cat{flex:0 0 78vw!important;max-width:330px!important;height:250px!important;border-radius:14px!important;scroll-snap-align:start!important;padding:18px!important;background-size:auto 250px!important;background-color:#111!important;box-shadow:inset 0 -100px 80px rgba(0,0,0,.72)!important}
+  #cats .cat b{font-size:21px!important;line-height:1.05!important;text-shadow:0 2px 8px #000!important}
+  #cats .cat small{font-size:11px!important;font-weight:700!important;margin-top:7px!important;color:#fff!important}
+  #cats .category-dots{display:flex;justify-content:center;gap:7px;margin:0 0 25px}
+  #cats .category-dots button{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:#bbb;transition:.2s}
+  #cats .category-dots button.active{width:20px;border-radius:8px;background:#151515}
+}
+@media(max-width:390px){#cats .cat{flex-basis:80vw!important;height:225px!important;background-size:auto 225px!important}#cats .cat b{font-size:19px!important}}
