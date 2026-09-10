@@ -5,7 +5,6 @@
   .site-header{position:sticky;top:0;z-index:100;background:#050708!important;border:0!important;box-shadow:0 4px 18px rgba(0,0,0,.18)}
   .site-header .top{width:min(94%,1540px)!important;min-height:92px!important;display:grid!important;grid-template-columns:280px minmax(440px,1fr) auto!important;gap:28px!important;align-items:center!important;padding:12px 0!important}
 
-  /* LOGO HORIZONTAL — igual à direção aprovada no mockup */
   .site-header .logo{gap:12px!important;display:flex!important;align-items:center!important;min-width:0!important;text-decoration:none!important}
   .site-header .logo-img{width:62px!important;height:62px!important;object-fit:contain!important;flex:0 0 62px!important;filter:drop-shadow(0 4px 10px rgba(0,0,0,.28))}
   .site-header .logo-copy{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;line-height:1!important;min-width:0!important}
@@ -24,26 +23,42 @@
   .site-header .topwa{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:46px!important;padding:0 20px!important;border-radius:9px!important;background:#ffc928!important;color:#090b0d!important;font-family:'Inter',Arial,sans-serif!important;font-size:11px!important;font-weight:800!important;box-shadow:0 8px 20px rgba(255,201,40,.12)!important;white-space:nowrap!important}
 
   .site-header .nav{width:100%!important;max-width:none!important;min-height:55px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:0!important;padding:0 4%!important;background:#07090b!important;color:#fff!important;border-top:1px solid #1d2226!important;border-bottom:1px solid #20252a!important;overflow:visible!important;position:relative!important}
-  .site-header .nav a{height:54px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;padding:0 21px!important;font-family:'Inter',Arial,sans-serif!important;font-size:12px!important;font-weight:700!important;white-space:nowrap!important;color:#fff!important;transition:background .18s ease,color .18s ease!important;border-bottom:2px solid transparent!important}
-  .site-header .nav a:hover,.site-header .nav a.mega-open{background:#1b1e21!important;color:#ffc928!important;border-bottom-color:#ffc928!important}
-  .site-header .nav a:nth-child(6){color:#ff5d55!important;font-weight:800!important}
-  .site-header .nav a:nth-child(7){color:#ffc928!important}
+  .site-header .nav>a{height:54px!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;padding:0 21px!important;font-family:'Inter',Arial,sans-serif!important;font-size:12px!important;font-weight:700!important;white-space:nowrap!important;color:#fff!important;transition:background .18s ease,color .18s ease!important;border-bottom:2px solid transparent!important}
+  .site-header .nav>a:hover,.site-header .nav>a.mega-open{background:#1b1e21!important;color:#ffc928!important;border-bottom-color:#ffc928!important}
+  .site-header .nav>a:nth-child(6){color:#ff5d55!important;font-weight:800!important}
+  .site-header .nav>a:nth-child(7){color:#ffc928!important}
 
-  .desktop-mega-menu{position:absolute!important;left:50%!important;top:100%!important;transform:translateX(-50%) translateY(-8px)!important;width:min(94vw,1520px)!important;background:#f7f7f5!important;color:#181b1e!important;border-radius:0 0 8px 8px!important;box-shadow:0 24px 55px rgba(0,0,0,.30)!important;opacity:0!important;visibility:hidden!important;pointer-events:none!important;transition:.18s ease!important;z-index:140!important;overflow:hidden!important;border:1px solid #dcdcdc!important;border-top:0!important}
+  .desktop-mega-menu{position:absolute!important;left:50%!important;top:100%!important;transform:translateX(-50%) translateY(-8px)!important;width:min(94vw,1520px)!important;background:#fff!important;color:#181b1e!important;border-radius:0 0 8px 8px!important;box-shadow:0 24px 55px rgba(0,0,0,.30)!important;opacity:0!important;visibility:hidden!important;pointer-events:none!important;transition:.18s ease!important;z-index:140!important;overflow:hidden!important;border:1px solid #dcdcdc!important;border-top:0!important}
   .desktop-mega-menu.is-open{opacity:1!important;visibility:visible!important;pointer-events:auto!important;transform:translateX(-50%) translateY(0)!important}
+
   .mega-tabs{display:grid!important;grid-template-columns:repeat(7,1fr)!important;background:#efefed!important;border-bottom:1px solid #d6d6d3!important}
-  .mega-tab{min-height:68px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:10px!important;padding:0 12px!important;border-right:1px solid #ddd!important;font-family:'Inter',Arial,sans-serif!important;font-size:13px!important;font-weight:700!important;color:#202326!important;background:transparent!important;cursor:pointer!important}
-  .mega-tab:last-child{border-right:0!important}.mega-tab.is-active{background:#fff!important;color:#111!important;box-shadow:inset 0 -3px 0 #ffc928!important}
-  .mega-tab .mi{font-size:25px!important;line-height:1!important}
-  .mega-content{display:grid!important;grid-template-columns:1.05fr 1fr 1fr 1fr 1fr 320px!important;gap:0!important;padding:20px 0 22px!important;background:#fff!important}
-  .mega-col{padding:0 20px!important;border-right:1px solid #ececea!important}
-  .mega-col h4{margin:0 0 12px!important;font-family:'Barlow Condensed',Arial,sans-serif!important;font-size:18px!important;line-height:1!important;letter-spacing:.04em!important;text-transform:uppercase!important;color:#e09400!important;font-weight:800!important}
-  .mega-col a{display:block!important;padding:5px 0!important;font-family:'Inter',Arial,sans-serif!important;font-size:12px!important;line-height:1.35!important;color:#3c4145!important;font-weight:500!important;border:0!important;height:auto!important;justify-content:flex-start!important;background:transparent!important}
-  .mega-col a:hover{color:#000!important;text-decoration:underline!important;background:transparent!important;border:0!important}
-  .mega-promos{padding:0 16px!important;display:flex!important;flex-direction:column!important;gap:12px!important}
-  .mega-promo{position:relative!important;display:block!important;min-height:128px!important;border-radius:7px!important;overflow:hidden!important;background:#111!important;color:#fff!important;padding:18px!important;border:0!important;height:auto!important;justify-content:flex-start!important;align-items:flex-end!important;background-size:cover!important;background-position:center!important}
+  .mega-tab{min-height:78px!important;display:flex!important;align-items:center!important;justify-content:center!important;gap:10px!important;padding:6px 12px!important;border:0!important;border-right:1px solid #d2d2cf!important;font-family:'Inter',Arial,sans-serif!important;font-size:13px!important;font-weight:700!important;color:#202326!important;background:#efefed!important;cursor:pointer!important;position:relative!important}
+  .mega-tab:last-child{border-right:0!important}
+  .mega-tab.is-active{background:#fff!important;color:#111!important;box-shadow:inset 0 -3px 0 #ffc928!important}
+  .mega-tab .mi{display:none!important}
+  .mega-tab::before{content:'';width:52px;height:50px;display:block;flex:0 0 52px;background-repeat:no-repeat;background-position:center;background-size:contain;border-radius:7px}
+  .mega-tab:nth-child(1)::before{background-image:url('IMG_4713.png')}
+  .mega-tab:nth-child(2)::before{background-image:url('IMG_4714.png')}
+  .mega-tab:nth-child(3)::before{background-image:url('IMG_4715.png')}
+  .mega-tab:nth-child(4)::before{background-image:url('IMG_4716.png')}
+  .mega-tab:nth-child(5)::before{background-image:url('IMG_4717.png')}
+  .mega-tab:nth-child(6)::before{background-image:url('IMG_4718.png')}
+  .mega-tab:nth-child(7)::before{background-image:url('IMG_4719.png')}
+  .mega-tab:nth-child(5),.mega-tab:nth-child(6),.mega-tab:nth-child(7){font-size:0!important}
+  .mega-tab:nth-child(5)::after{content:'Amplificadores';font-size:13px!important}
+  .mega-tab:nth-child(6)::after{content:'Pedais & Efeitos';font-size:13px!important}
+  .mega-tab:nth-child(7)::after{content:'Áudio';font-size:13px!important}
+
+  .mega-content{display:grid!important;grid-template-columns:1.05fr 1fr 1fr 1fr 1fr 320px!important;gap:0!important;padding:22px 0 24px!important;background:#fff!important;min-height:390px!important}
+  .mega-col{padding:0 20px!important;border-right:1px solid #ececea!important;background:#fff!important}
+  .mega-col h4{margin:0 0 14px!important;font-family:'Barlow Condensed',Arial,sans-serif!important;font-size:18px!important;line-height:1!important;letter-spacing:.04em!important;text-transform:uppercase!important;color:#d78b00!important;font-weight:800!important}
+  .site-header .nav .desktop-mega-menu .mega-col a{display:block!important;padding:5px 0!important;margin:0!important;font-family:'Inter',Arial,sans-serif!important;font-size:12px!important;line-height:1.4!important;color:#3c4145!important;font-weight:500!important;border:0!important;height:auto!important;min-height:0!important;justify-content:flex-start!important;background:transparent!important;text-decoration:none!important;white-space:normal!important}
+  .site-header .nav .desktop-mega-menu .mega-col a:hover{color:#000!important;text-decoration:underline!important;background:transparent!important;border:0!important}
+
+  .mega-promos{padding:0 16px!important;display:flex!important;flex-direction:column!important;gap:12px!important;background:#fff!important}
+  .site-header .nav .desktop-mega-menu .mega-promo{position:relative!important;display:flex!important;min-height:128px!important;border-radius:7px!important;overflow:hidden!important;background:#111!important;color:#fff!important;padding:18px!important;border:0!important;height:auto!important;justify-content:flex-start!important;align-items:flex-end!important;background-size:cover!important;background-position:center!important;text-decoration:none!important}
   .mega-promo::before{content:''!important;position:absolute!important;inset:0!important;background:linear-gradient(90deg,rgba(0,0,0,.86),rgba(0,0,0,.18))!important}
-  .mega-promo span{position:relative!important;z-index:2!important;display:block!important;font-family:'Barlow Condensed',Arial,sans-serif!important;font-size:22px!important;line-height:.95!important;text-transform:uppercase!important;font-weight:800!important;max-width:150px!important}
+  .mega-promo span{position:relative!important;z-index:2!important;display:block!important;font-family:'Barlow Condensed',Arial,sans-serif!important;font-size:22px!important;line-height:.95!important;text-transform:uppercase!important;font-weight:800!important;max-width:160px!important;color:#fff!important}
   .mega-promo small{position:relative!important;z-index:2!important;display:block!important;margin-top:6px!important;font-size:10px!important;color:#fff!important}
   .mega-promo.one{background-image:url('IMG_4713.png')!important}
   .mega-promo.two{background-image:url('tagima-edu-ardanuy-signature-solmusic-banner-v8-desktop.png')!important}
@@ -63,7 +78,10 @@
   .site-header .logo-copy small::after{font-size:6px!important;letter-spacing:2.4px!important}
   .site-header .tools{gap:10px!important;font-size:10px!important}
   .site-header .topwa{padding:0 13px!important}
-  .site-header .nav a{padding:0 13px!important;font-size:11px!important}
+  .site-header .nav>a{padding:0 13px!important;font-size:11px!important}
   .mega-content{grid-template-columns:1fr 1fr 1fr 1fr 1fr 270px!important}
   .mega-col{padding:0 14px!important}
+  .mega-tab{gap:7px!important;padding:4px 7px!important}
+  .mega-tab::before{width:44px;height:42px;flex-basis:44px}
+  .mega-tab:nth-child(5)::after,.mega-tab:nth-child(6)::after,.mega-tab:nth-child(7)::after{font-size:11px!important}
 }
