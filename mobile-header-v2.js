@@ -11,6 +11,40 @@
       top.appendChild(actions);
       actions.querySelector('.mobile-menu-btn-right')?.addEventListener('click',()=>document.body.classList.add('mobile-menu-open'));
     }
+
+    if(window.matchMedia('(min-width:1001px)').matches){
+      const nav=header.querySelector('.nav');
+      const trigger=nav?.querySelector('a:first-child');
+      if(nav&&trigger&&!header.querySelector('.desktop-mega-menu')){
+        const mega=document.createElement('div');
+        mega.className='desktop-mega-menu';
+        mega.innerHTML=`
+          <div class="mega-tabs">
+            <button class="mega-tab is-active" type="button"><span class="mi">🎸</span>Guitarras</button>
+            <button class="mega-tab" type="button"><span class="mi">🎸</span>Baixos</button>
+            <button class="mega-tab" type="button"><span class="mi">🪕</span>Violões</button>
+            <button class="mega-tab" type="button"><span class="mi">🥁</span>Baterias</button>
+            <button class="mega-tab" type="button"><span class="mi">🎹</span>Teclas</button>
+            <button class="mega-tab" type="button"><span class="mi">🔊</span>Áudio</button>
+            <button class="mega-tab" type="button"><span class="mi">🎛️</span>Acessórios</button>
+          </div>
+          <div class="mega-content">
+            <div class="mega-col"><h4>Escolhas rápidas</h4><a href="#products">Mais vendidos</a><a href="#products">Novidades</a><a href="#offers">Promoções</a><a href="#products">Exclusivos SolMusic</a><a href="#products">Custo-benefício</a><a href="#products">Para iniciantes</a><a href="#products">Para profissionais</a><a href="#products">Parcelamento sem juros</a></div>
+            <div class="mega-col"><h4>Tipo de corpo</h4><a href="#products">Stratocaster (ST)</a><a href="#products">Telecaster (TL)</a><a href="#products">Les Paul (LP)</a><a href="#products">Super Strato</a><a href="#products">Semiacústicas</a><a href="#products">Hollow Body</a><a href="#products">Headless</a><a href="#products">7 Cordas</a><a href="#products">8 Cordas</a><a href="#products">Canhotas</a></div>
+            <div class="mega-col"><h4>Marcas populares</h4><a href="#brands">Fender</a><a href="#brands">Gibson</a><a href="#brands">PRS</a><a href="#brands">Ibanez</a><a href="#brands">Tagima</a><a href="#brands">Epiphone</a><a href="#brands">Squier</a><a href="#brands">Jackson</a><a href="#brands">ESP</a><a href="#brands">Cort</a></div>
+            <div class="mega-col"><h4>Modelos populares</h4><a href="#products">Fender Stratocaster</a><a href="#products">Fender Telecaster</a><a href="#products">Gibson Les Paul</a><a href="#products">PRS Custom 24</a><a href="#products">Ibanez RG</a><a href="#products">Ibanez Prestige</a><a href="#products">Ibanez AZ</a><a href="#products">Tagima Signature</a><a href="#products">Epiphone Les Paul</a><a href="#products">Jackson Soloist</a></div>
+            <div class="mega-col"><h4>Acessórios</h4><a href="#cats">Cordas</a><a href="#cats">Captadores</a><a href="#cats">Correias</a><a href="#cats">Cases e Bags</a><a href="#cats">Palhetas</a><a href="#cats">Cabos</a><a href="#cats">Pedais de Efeito</a><a href="#cats">Partes e Peças</a><a href="#cats">Afinadores</a><a href="#cats">Suportes</a></div>
+            <div class="mega-promos"><a class="mega-promo one" href="#products"><div><span>Encontre sua próxima guitarra</span><small>Ver modelos →</small></div></a><a class="mega-promo two" href="#products"><div><span>Tagima Signature</span><small>Conhecer →</small></div></a></div>
+          </div>`;
+        nav.appendChild(mega);
+        let closeTimer;
+        const open=()=>{clearTimeout(closeTimer);mega.classList.add('is-open');trigger.classList.add('mega-open')};
+        const close=()=>{closeTimer=setTimeout(()=>{mega.classList.remove('is-open');trigger.classList.remove('mega-open')},120)};
+        trigger.addEventListener('mouseenter',open);trigger.addEventListener('focus',open);mega.addEventListener('mouseenter',()=>clearTimeout(closeTimer));mega.addEventListener('mouseleave',close);nav.addEventListener('mouseleave',close);
+        trigger.addEventListener('click',e=>{e.preventDefault();mega.classList.toggle('is-open');trigger.classList.toggle('mega-open')});
+        document.addEventListener('keydown',e=>{if(e.key==='Escape'){mega.classList.remove('is-open');trigger.classList.remove('mega-open')}});
+      }
+    }
   }
   if(!window.matchMedia('(max-width:700px)').matches) return;
 
