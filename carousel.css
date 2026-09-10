@@ -18,23 +18,24 @@
 .hero-carousel .carousel-count{position:absolute;z-index:9;left:24px;bottom:18px;color:#fff;font-size:11px;font-weight:800;letter-spacing:1px;text-shadow:0 2px 10px #000}.hero-carousel .carousel-count span{color:#8f989f;font-weight:500;margin-left:8px}
 @media(max-width:900px){.hero-carousel .carousel-track{aspect-ratio:auto;height:420px;min-height:420px}.hero-carousel .hero-overlay{left:40px;width:48vw}.hero-carousel .hero-overlay::before{inset:-30px -55px -30px -32px;background:linear-gradient(90deg,rgba(2,6,9,.72),rgba(2,6,9,.38) 62%,transparent)}.hero-carousel .hero-overlay h2{font-size:clamp(34px,5vw,48px)}.hero-carousel .hero-overlay p{font-size:14px}.hero-carousel .hero-cta{min-height:42px;padding:0 17px;font-size:12px}.hero-carousel .carousel-arrow{width:34px;height:34px;font-size:20px}.hero-carousel .carousel-prev{left:8px}.hero-carousel .carousel-next{right:8px}.hero-carousel .carousel-count{left:14px;bottom:12px}.hero-carousel .carousel-nav{bottom:10px}}
 @media(max-width:600px){
- .hero-carousel{border-top-color:#263038}
- .hero-carousel .carousel-track{aspect-ratio:auto;height:455px;min-height:455px}
- .hero-carousel .carousel-slide{align-items:stretch;background:#05090c}
- .hero-carousel .carousel-slide img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:66% center;transform:scale(1.01)}
+ .hero-carousel{border-top-color:#263038;background:#05090c}
+ .hero-carousel .carousel-track{aspect-ratio:auto;height:520px;min-height:520px;background:#05090c}
+ .hero-carousel .carousel-slide{display:block;background:#05090c}
+ .hero-carousel .carousel-slide img{position:absolute;left:0;top:0;width:100%;height:54%;object-fit:cover;object-position:center center;transform:none;background:#0a0d10}
+ .hero-carousel .carousel-slide:nth-child(1) img{object-position:62% center}
  .hero-carousel .carousel-slide:nth-child(2) img{object-position:64% center}
- .hero-carousel .carousel-slide:nth-child(3) img{object-position:58% center}
- .hero-carousel .carousel-slide:nth-child(4) img{object-position:56% center}
- .hero-carousel .carousel-slide::after{content:"";position:absolute;inset:0;z-index:2;background:linear-gradient(90deg,rgba(3,7,10,.70) 0%,rgba(3,7,10,.48) 33%,rgba(3,7,10,.16) 62%,rgba(3,7,10,0) 82%);pointer-events:none}
- .hero-carousel .hero-overlay{left:24px;top:auto;bottom:62px;transform:none;width:min(74vw,315px);z-index:4;text-shadow:0 2px 12px rgba(0,0,0,.88)}
- .hero-carousel .hero-overlay::before{content:"";display:block;position:absolute;inset:-14px -18px -14px -14px;border-radius:16px;background:linear-gradient(90deg,rgba(3,7,10,.52),rgba(3,7,10,.18) 72%,transparent);z-index:-1}
- .hero-carousel .hero-kicker{font-size:10px;line-height:1.3;letter-spacing:.15em;margin-bottom:8px}
- .hero-carousel .hero-overlay h2{font-size:33px;line-height:.94;letter-spacing:-.035em;margin-bottom:10px}
- .hero-carousel .hero-overlay p{display:block;font-size:13px;line-height:1.34;margin-bottom:14px;max-width:290px}
+ .hero-carousel .carousel-slide:nth-child(3) img{object-position:72% center}
+ .hero-carousel .carousel-slide:nth-child(4) img{object-position:68% center}
+ .hero-carousel .carousel-slide::after{content:"";position:absolute;left:0;right:0;top:42%;height:14%;z-index:2;background:linear-gradient(180deg,rgba(5,9,12,0),#05090c 92%);pointer-events:none}
+ .hero-carousel .hero-overlay{position:absolute;left:22px;right:22px;top:auto;bottom:42px;transform:none;width:auto;z-index:4;text-shadow:none}
+ .hero-carousel .hero-overlay::before{display:none}
+ .hero-carousel .hero-kicker{font-size:10px;line-height:1.3;letter-spacing:.15em;margin-bottom:7px;color:#ffc928}
+ .hero-carousel .hero-overlay h2{font-size:30px;line-height:.95;letter-spacing:-.03em;margin:0 0 9px;max-width:340px}
+ .hero-carousel .hero-overlay p{display:block;font-size:13px;line-height:1.35;margin:0 0 13px;max-width:340px;color:#dce2e6}
  .hero-carousel .hero-cta{min-height:38px;padding:0 14px;font-size:11px;border-radius:7px}
- .hero-carousel .carousel-arrow{top:50%;width:30px;height:42px;border-radius:12px;border-color:rgba(255,255,255,.22);font-size:22px;background:rgba(5,9,12,.10);backdrop-filter:none;opacity:.52}
- .hero-carousel .carousel-arrow:active{opacity:.9;background:rgba(5,9,12,.35)}
- .hero-carousel .carousel-prev{left:4px}.hero-carousel .carousel-next{right:4px}
- .hero-carousel .carousel-nav{bottom:14px;gap:5px;padding:5px 7px;background:rgba(5,9,12,.12)}.hero-carousel .carousel-dot{width:18px;height:3px}.hero-carousel .carousel-dot.is-active{width:28px}.hero-carousel .carousel-count{display:none}
+ .hero-carousel .carousel-arrow{top:27%;width:28px;height:38px;border-radius:10px;border:1px solid rgba(255,255,255,.18);font-size:21px;background:rgba(5,9,12,.12);backdrop-filter:none;opacity:.50}
+ .hero-carousel .carousel-arrow:active{opacity:.95;background:rgba(5,9,12,.42)}
+ .hero-carousel .carousel-prev{left:5px}.hero-carousel .carousel-next{right:5px}
+ .hero-carousel .carousel-nav{bottom:12px;gap:5px;padding:4px 6px;background:transparent;backdrop-filter:none}.hero-carousel .carousel-dot{width:16px;height:3px;background:rgba(255,255,255,.28)}.hero-carousel .carousel-dot.is-active{width:25px;background:#ffc928}.hero-carousel .carousel-count{display:none}
 }
-@media(max-width:390px){.hero-carousel .carousel-track{height:430px;min-height:430px}.hero-carousel .hero-overlay{left:22px;bottom:58px;width:76vw}.hero-carousel .hero-overlay h2{font-size:30px}.hero-carousel .hero-overlay p{font-size:12px}}
+@media(max-width:390px){.hero-carousel .carousel-track{height:500px;min-height:500px}.hero-carousel .hero-overlay{left:18px;right:18px;bottom:40px}.hero-carousel .hero-overlay h2{font-size:28px}.hero-carousel .hero-overlay p{font-size:12.5px}}
