@@ -1,16 +1,18 @@
 @media(max-width:700px){
-  #cats.catalog{padding-top:26px!important}
+  #cats.catalog{padding-top:26px!important;overflow:hidden!important}
   #cats .section-head{display:block!important;text-align:center!important;margin-bottom:18px!important}
   #cats .section-head h2{font-size:22px!important;letter-spacing:.2px!important;text-transform:none!important}
-  #cats .section-head h2::after{content:"Explore por categorias";font-size:0}
   #cats .section-head>a{display:none!important}
-  #cats .cats{display:flex!important;gap:14px!important;overflow-x:auto!important;scroll-snap-type:x mandatory!important;scroll-padding:18px!important;padding:0 18px 16px!important;margin:0 -3%!important;scrollbar-width:none!important;-webkit-overflow-scrolling:touch}
-  #cats .cats::-webkit-scrollbar{display:none}
-  #cats .cat{flex:0 0 78vw!important;max-width:330px!important;height:250px!important;border-radius:14px!important;scroll-snap-align:start!important;padding:18px!important;background-size:auto 250px!important;background-color:#111!important;box-shadow:inset 0 -100px 80px rgba(0,0,0,.72)!important}
-  #cats .cat b{font-size:21px!important;line-height:1.05!important;text-shadow:0 2px 8px #000!important}
-  #cats .cat small{font-size:11px!important;font-weight:700!important;margin-top:7px!important;color:#fff!important}
+  #cats .cats{display:flex!important;align-items:stretch!important;gap:10px!important;overflow-x:auto!important;scroll-snap-type:x mandatory!important;scroll-padding:18px!important;padding:0 18px 16px!important;margin:0 -3%!important;scrollbar-width:none!important;-webkit-overflow-scrolling:touch!important}
+  #cats .cats::-webkit-scrollbar{display:none!important}
+  #cats .cat{flex:0 0 82px!important;width:82px!important;max-width:none!important;height:min(82vw,340px)!important;border-radius:14px!important;scroll-snap-align:center!important;padding:16px!important;background-size:auto min(82vw,340px)!important;background-position:center!important;background-color:#111!important;box-shadow:inset 0 -110px 90px rgba(0,0,0,.76)!important;transition:flex-basis .38s cubic-bezier(.2,.75,.25,1),width .38s cubic-bezier(.2,.75,.25,1),opacity .28s ease,transform .28s ease!important;opacity:.72!important;transform:scale(.97)!important;overflow:hidden!important}
+  #cats .cat.active{flex-basis:min(82vw,340px)!important;width:min(82vw,340px)!important;opacity:1!important;transform:scale(1)!important}
+  #cats .cat b{font-size:0!important;line-height:1.05!important;text-shadow:0 2px 8px #000!important;white-space:nowrap!important;transition:font-size .2s ease!important}
+  #cats .cat small{display:none!important}
+  #cats .cat.active b{font-size:23px!important}
+  #cats .cat.active small{display:block!important;font-size:12px!important;font-weight:700!important;margin-top:7px!important;color:#fff!important}
   #cats .category-dots{display:flex;justify-content:center;gap:7px;margin:0 0 25px}
   #cats .category-dots button{width:7px;height:7px;padding:0;border:0;border-radius:50%;background:#bbb;transition:.2s}
   #cats .category-dots button.active{width:20px;border-radius:8px;background:#151515}
 }
-@media(max-width:390px){#cats .cat{flex-basis:80vw!important;height:225px!important;background-size:auto 225px!important}#cats .cat b{font-size:19px!important}}
+@media(max-width:390px){#cats .cat{flex-basis:68px!important;width:68px!important;height:min(80vw,305px)!important;background-size:auto min(80vw,305px)!important}#cats .cat.active{flex-basis:min(80vw,305px)!important;width:min(80vw,305px)!important}#cats .cat.active b{font-size:21px!important}}
