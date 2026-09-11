@@ -1,0 +1,45 @@
+/* BLOCO DESKTOP — reprodução do mockup aprovado a partir da faixa de benefícios */
+@media (min-width:1001px){
+  .trust{background:#f4f4f2!important;border:0!important;color:#17191c!important}
+  .trust-grid{width:min(94%,1500px)!important;min-height:54px!important;grid-template-columns:repeat(5,1fr)!important;font-family:'Manrope',Arial,sans-serif!important;font-size:11px!important;font-weight:600!important;gap:14px!important}
+  .trust-grid span{display:flex!important;align-items:center!important;justify-content:center!important;gap:8px!important;white-space:nowrap!important}
+
+  .catalog{background:#f7f7f5!important;padding:18px 0 22px!important}
+  .catalog>.wrap{width:min(94%,1500px)!important}
+  .catalog .section-head{margin:0 0 14px!important;align-items:center!important}
+  .catalog .section-head h2{font-family:'Manrope',Arial,sans-serif!important;font-size:25px!important;line-height:1!important;font-weight:900!important;letter-spacing:-.7px!important;text-transform:uppercase!important}
+  .catalog .section-head a{font-family:'Manrope',Arial,sans-serif!important;font-size:11px!important;font-weight:700!important;color:#111!important}
+
+  .cats{display:grid!important;grid-template-columns:repeat(7,minmax(0,1fr))!important;gap:10px!important}
+  .cat{height:176px!important;border-radius:6px!important;padding:12px 11px!important;box-shadow:inset 0 -76px 60px rgba(0,0,0,.74)!important;background-size:1085px 176px!important;transition:none!important}
+  .c1{background-position:0 0!important}.c2{background-position:-155px 0!important}.c3{background-position:-310px 0!important}.c4{background-position:-465px 0!important}.c5{background-position:-620px 0!important}.c6{background-position:-775px 0!important}.c7{background-position:-930px 0!important}
+  .cat b{font-family:'Manrope',Arial,sans-serif!important;font-size:16px!important;line-height:1.05!important;font-weight:900!important;letter-spacing:-.35px!important}
+  .cat small{font-family:'Manrope',Arial,sans-serif!important;font-size:10px!important;margin-top:4px!important}
+
+  .duo{grid-template-columns:1fr 1fr!important;gap:16px!important;margin:16px 0 24px!important}
+  .duo article{height:190px!important;border-radius:6px!important;padding:0!important;background-size:1210px 190px!important;background-color:#111!important;box-shadow:none!important}
+  .promo{background-position:left top!important}.club{background-position:right top!important}
+  .promo-content,.club-content{height:100%!important}
+  .promo-content>*{visibility:hidden!important}
+  .club-content>*{visibility:hidden!important}
+
+  .products-head{margin:0 0 10px!important;align-items:flex-start!important}
+  .products-head h2{font-size:25px!important}
+  .products-head p{font-family:'Manrope',Arial,sans-serif!important;font-size:11px!important;margin:3px 0 0!important;color:#222!important}
+  .products{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:12px!important}
+  .card{min-height:305px!important;border:1px solid #dadde0!important;border-radius:7px!important;background:#fff!important;box-shadow:0 2px 9px rgba(0,0,0,.03)!important;overflow:hidden!important}
+  .card:first-child::before{content:'DESTAQUE'!important;position:absolute!important;z-index:5!important;left:12px!important;top:10px!important;background:#ffc928!important;color:#111!important;border-radius:5px!important;padding:5px 9px!important;font:900 9px/1 'Manrope',Arial,sans-serif!important}
+  .heart{right:12px!important;top:10px!important;font-size:20px!important}
+  .pic{height:160px!important;background:#fafafa!important}
+  .pic:after{top:5px!important;height:150px!important;width:40px!important}
+  .p5:after{width:68px!important}
+  .body{padding:10px 12px 12px!important;font-family:'Manrope',Arial,sans-serif!important}
+  .body h3{font-size:13px!important;line-height:1.05!important;font-weight:900!important}
+  .body small{font-size:9px!important;color:#333!important}
+  .price{font-size:17px!important;line-height:1!important;margin-top:9px!important}
+  .actions{gap:8px!important;margin-top:9px!important}
+  .actions a{padding:9px 4px!important;border-radius:5px!important;font-size:9px!important;font-weight:800!important}
+
+  .brands{padding:22px 4px 2px!important;gap:22px!important;flex-wrap:nowrap!important;color:#232323!important;overflow:hidden!important}
+  .brands span{white-space:nowrap!important;font-size:18px!important}
+}
