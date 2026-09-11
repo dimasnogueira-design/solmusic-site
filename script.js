@@ -87,7 +87,9 @@ const products=[
   ["S by Solar","A2.6C","R$ 3.990,00","produto-04.png"],
   ["Takamine","GD11MCE","R$ 2.690,00","produto-05.png"]
 ];
-document.querySelectorAll("[data-wa]").forEach(a=>{a.href=WA+"?text="+encodeURIComponent("Olá! Vim pelo site da SolMusic e gostaria de falar com um especialista.");a.target="_blank";a.rel="noopener"});document.querySelectorAll(".reelgrid a").forEach(a=>{a.href=IG;a.rel="noopener"});
+document.querySelectorAll("[data-wa]").forEach(a=>{a.href=WA+"?text="+encodeURIComponent("Olá! Vim pelo site da SolMusic e gostaria de falar com um especialista.");a.target="_blank";a.rel="noopener"});
+const reelLinks=["https://www.instagram.com/lojasolmusic/reel/DcmXVimxyOD/",IG,IG,IG,IG];
+document.querySelectorAll(".reelgrid a").forEach((a,i)=>{a.href=reelLinks[i]||IG;a.target="_blank";a.rel="noopener"});
 const grid=document.getElementById("grid");if(grid)grid.innerHTML=products.map(p=>`<article class="card"><button class="heart" aria-label="Favoritar">♡</button><div class="pic"><img src="${p[3]}" alt="${p[0]} ${p[1]}"></div><div class="body"><h3>${p[0]}</h3><small>${p[1]}</small><div class="price">${p[2]}</div><small>à vista no Pix</small><div class="actions"><a href="#">Comprar →</a><a target="_blank" rel="noopener" href="${WA}?text=${encodeURIComponent("Olá! Vi no site "+p[0]+" "+p[1]+". Está disponível?")}">◉ WhatsApp</a></div></div></article>`).join("");
 
 const catalogTitle=document.querySelector('.catalog .section-head h2');if(catalogTitle)catalogTitle.textContent='ENCONTRE SEU SOM';
