@@ -30,66 +30,55 @@
 
 /* HEADER DESKTOP — compacto real após rolagem; expande no hover */
 @media(min-width:1001px){
-  .site-header,.site-header .top,.site-header .logo-img,.site-header .logo-copy,.site-header .search,.site-header .tools,.site-header .nav,.site-header .nav>a{
-    transition:all .26s cubic-bezier(.2,.8,.2,1)!important;
-  }
+  .site-header,.site-header .top,.site-header .logo-img,.site-header .logo-copy,.site-header .search,.site-header .tools,.site-header .nav,.site-header .nav>a{transition:all .26s cubic-bezier(.2,.8,.2,1)!important}
   .site-header.sm-compact:not(:hover){box-shadow:0 8px 24px rgba(0,0,0,.28)!important}
-  .site-header.sm-compact:not(:hover) .top{
-    min-height:54px!important;
-    height:54px!important;
-    padding:5px 0!important;
-    grid-template-columns:56px 0 0!important;
-    gap:0!important;
-    overflow:hidden!important;
-  }
+  .site-header.sm-compact:not(:hover) .top{min-height:54px!important;height:54px!important;padding:5px 0!important;grid-template-columns:56px 0 0!important;gap:0!important;overflow:hidden!important}
   .site-header.sm-compact:not(:hover) .logo{width:56px!important;min-width:56px!important;gap:0!important}
   .site-header.sm-compact:not(:hover) .logo-img{width:44px!important;height:44px!important;flex-basis:44px!important}
   .site-header.sm-compact:not(:hover) .logo-copy{opacity:0!important;width:0!important;max-width:0!important;overflow:hidden!important;transform:translateX(-8px)!important;pointer-events:none!important}
-  .site-header.sm-compact:not(:hover) .search,
-  .site-header.sm-compact:not(:hover) .tools{
-    opacity:0!important;
-    visibility:hidden!important;
-    width:0!important;
-    max-width:0!important;
-    min-width:0!important;
-    height:0!important;
-    max-height:0!important;
-    overflow:hidden!important;
-    pointer-events:none!important;
-    transform:translateY(-6px) scale(.96)!important;
-  }
-  .site-header.sm-compact:not(:hover) .nav{
-    min-height:0!important;
-    height:0!important;
-    padding-top:0!important;
-    padding-bottom:0!important;
-    border-top:0!important;
-    border-bottom:0!important;
-    opacity:0!important;
-    overflow:hidden!important;
-    pointer-events:none!important;
-  }
+  .site-header.sm-compact:not(:hover) .search,.site-header.sm-compact:not(:hover) .tools{opacity:0!important;visibility:hidden!important;width:0!important;max-width:0!important;min-width:0!important;height:0!important;max-height:0!important;overflow:hidden!important;pointer-events:none!important;transform:translateY(-6px) scale(.96)!important}
+  .site-header.sm-compact:not(:hover) .nav{min-height:0!important;height:0!important;padding-top:0!important;padding-bottom:0!important;border-top:0!important;border-bottom:0!important;opacity:0!important;overflow:hidden!important;pointer-events:none!important}
   .site-header.sm-compact:not(:hover) .nav>a{height:0!important;padding-top:0!important;padding-bottom:0!important;font-size:0!important;opacity:0!important}
 }
 
-@media(max-width:900px){
-  .blog-solmusic{padding:34px 0 64px}
-  .blog-solmusic h2{font-size:33px}
-  .blog-feature{grid-template-columns:1fr;gap:18px;margin-bottom:32px}
-  .blog-feature-copy{padding:0}
-  .blog-grid{grid-template-columns:1fr 1fr;gap:28px}
-  .blog-card:last-child{grid-column:1/-1}
-}
+/* FOOTER SOLMUSIC — institucional premium */
+footer#footer{position:relative!important;background:linear-gradient(180deg,#0b0d0f 0%,#050607 72%,#020304 100%)!important;color:#fff!important;border-top:3px solid #ffc928!important;font-family:'Manrope',Arial,sans-serif!important;overflow:hidden!important}
+footer#footer::before{content:"SOLMUSIC";position:absolute;right:-30px;bottom:28px;font-size:150px;line-height:.8;font-weight:900;letter-spacing:-9px;color:rgba(255,255,255,.025);pointer-events:none;white-space:nowrap}
+footer#footer::after{content:"MÚSICA É MAIS VIDA.";position:absolute;left:50%;top:24px;transform:translateX(-50%);font-size:9px;font-weight:800;letter-spacing:.42em;color:#ffc928;opacity:.92;white-space:nowrap}
+footer#footer .foot{width:min(92%,1460px)!important;margin:0 auto!important;padding:76px 0 54px!important;display:grid!important;grid-template-columns:1.5fr .85fr .85fr .85fr 1.05fr!important;gap:54px!important;align-items:start!important;border-bottom:1px solid rgba(255,255,255,.10)!important;position:relative!important;z-index:2!important}
+footer#footer .footer-brand{padding-right:24px!important;position:relative!important}
+footer#footer .footer-brand .logo{display:flex!important;align-items:center!important;gap:16px!important;margin-bottom:22px!important}
+footer#footer .footer-brand .logo::after{content:"SolMusic";display:block;font-size:36px;line-height:1;font-weight:900;letter-spacing:-1.8px;color:#fff}
+footer#footer .footer-logo{width:76px!important;height:76px!important;object-fit:contain!important;filter:drop-shadow(0 10px 24px rgba(0,0,0,.35))!important}
+footer#footer .footer-brand p{margin:0!important;color:#c7cbce!important;font-size:13px!important;line-height:1.7!important;max-width:330px!important}
+footer#footer .footer-brand::after{content:"Caraguatatuba/SP  •  Atendimento especializado  •  Enviamos para todo o Brasil";display:block;margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,.09);color:#81888d;font-size:10px;line-height:1.6;max-width:360px}
+footer#footer .foot>div:not(.footer-brand):not(.footer-cta)>b{display:block!important;margin:0 0 18px!important;color:#ffc928!important;font-size:10px!important;font-weight:900!important;letter-spacing:.16em!important;text-transform:uppercase!important}
+footer#footer .foot>div:not(.footer-brand):not(.footer-cta)>a{display:block!important;margin:0 0 11px!important;color:#c9cdd0!important;font-size:12px!important;line-height:1.35!important;transition:color .18s ease,transform .18s ease!important}
+footer#footer .foot>div:not(.footer-brand):not(.footer-cta)>a:hover{color:#fff!important;transform:translateX(3px)!important}
+footer#footer .footer-cta{padding:24px!important;border:1px solid rgba(255,255,255,.12)!important;border-radius:16px!important;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018))!important;box-shadow:0 18px 45px rgba(0,0,0,.18)!important;backdrop-filter:blur(8px)!important}
+footer#footer .footer-cta::before{content:"FALE COM A SOLMUSIC";display:block;color:#ffc928;font-size:9px;font-weight:900;letter-spacing:.16em;margin-bottom:12px}
+footer#footer .footer-cta i{display:block!important;margin:0 0 20px!important;color:#fff!important;font-size:25px!important;line-height:1.05!important;font-style:normal!important;font-weight:800!important;letter-spacing:-.7px!important}
+footer#footer .footer-cta .btn{width:100%!important;min-height:44px!important;display:flex!important;align-items:center!important;justify-content:center!important;border-radius:9px!important;background:#ffc928!important;border-color:#ffc928!important;color:#101214!important;font-size:10px!important;font-weight:900!important;transition:transform .18s ease,box-shadow .18s ease!important}
+footer#footer .footer-cta .btn:hover{transform:translateY(-2px)!important;box-shadow:0 10px 24px rgba(255,201,40,.16)!important}
+footer#footer .footer-cta::after{content:"Instagram  •  YouTube  •  Facebook";display:block;margin-top:17px;color:#7e858a;font-size:9px;letter-spacing:.08em}
+footer#footer .copyr{width:min(92%,1460px)!important;margin:0 auto!important;min-height:72px!important;padding:0!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:24px!important;color:#777e83!important;font-size:10px!important;position:relative!important;z-index:2!important}
+footer#footer .copyr span:last-child{color:#aab0b4!important}
+footer#footer .copyr::after{content:"Privacidade  •  Termos  •  Trocas e devoluções";position:absolute;left:50%;transform:translateX(-50%);color:#686f74;font-size:9px;white-space:nowrap}
+
+@media(max-width:1100px){footer#footer .foot{grid-template-columns:1.3fr repeat(2,1fr)!important;gap:36px!important}footer#footer .footer-cta{grid-column:2/-1!important}footer#footer .copyr::after{display:none!important}}
 @media(max-width:700px){
-  .blog-solmusic{padding:28px 0 48px}
-  .blog-solmusic .blog-head{align-items:flex-start;flex-direction:column;margin-bottom:22px}
-  .blog-solmusic h2{font-size:29px;letter-spacing:-1px}
-  .blog-solmusic .blog-sub{font-size:12px}
-  .blog-solmusic .blog-all{height:40px}
-  .blog-feature-media{border-radius:16px}
-  .blog-feature-copy h3{font-size:25px}
-  .blog-feature-copy p{font-size:13px}
-  .blog-grid{grid-template-columns:1fr;gap:28px}
-  .blog-card:last-child{grid-column:auto}
-  .blog-card-media{border-radius:16px}
+  .blog-solmusic{padding:28px 0 48px}.blog-solmusic .blog-head{align-items:flex-start;flex-direction:column;margin-bottom:22px}.blog-solmusic h2{font-size:29px;letter-spacing:-1px}.blog-solmusic .blog-sub{font-size:12px}.blog-solmusic .blog-all{height:40px}.blog-feature-media{border-radius:16px}.blog-feature-copy h3{font-size:25px}.blog-feature-copy p{font-size:13px}.blog-grid{grid-template-columns:1fr;gap:28px}.blog-card:last-child{grid-column:auto}.blog-card-media{border-radius:16px}
+  footer#footer::before{font-size:82px;right:-18px;bottom:62px}
+  footer#footer::after{top:20px;font-size:8px;letter-spacing:.24em}
+  footer#footer .foot{padding:64px 0 34px!important;grid-template-columns:1fr 1fr!important;gap:30px 24px!important}
+  footer#footer .footer-brand{grid-column:1/-1!important;padding-right:0!important}
+  footer#footer .footer-brand .logo::after{font-size:31px}
+  footer#footer .footer-logo{width:64px!important;height:64px!important}
+  footer#footer .footer-cta{grid-column:1/-1!important}
+  footer#footer .copyr{min-height:92px!important;flex-direction:column!important;justify-content:center!important;text-align:center!important;gap:8px!important}
+  footer#footer .copyr::after{display:none!important}
+}
+
+@media(max-width:900px) and (min-width:701px){
+  .blog-solmusic{padding:34px 0 64px}.blog-solmusic h2{font-size:33px}.blog-feature{grid-template-columns:1fr;gap:18px;margin-bottom:32px}.blog-feature-copy{padding:0}.blog-grid{grid-template-columns:1fr 1fr;gap:28px}.blog-card:last-child{grid-column:1/-1}
 }
