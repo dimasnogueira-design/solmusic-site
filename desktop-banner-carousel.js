@@ -77,14 +77,17 @@
   mainTrigger?.addEventListener('mouseenter',closeExtraMenus);
   mainTrigger?.addEventListener('focus',closeExtraMenus);
 
-  nav.addEventListener('mouseleave',()=>setTimeout(()=>{
-    closeExtraMenus();
-  },140));
+  nav.addEventListener('mouseleave',()=>setTimeout(()=>{closeExtraMenus();},140));
+  document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeExtraMenus();closeMainMega();}});
+})();
 
-  document.addEventListener('keydown',e=>{
-    if(e.key==='Escape'){
-      closeExtraMenus();
-      closeMainMega();
-    }
-  });
+// Load the visual upgrade for the Instrumentos mega menu. This file already exists in the repo,
+// but index.html did not reference it, so the uploaded promo artwork never reached the live menu.
+(()=>{
+  if(!window.matchMedia('(min-width:1001px)').matches) return;
+  if(document.querySelector('script[data-solmusic-mega-v2]')) return;
+  const s=document.createElement('script');
+  s.src='desktop-mega-menu-v2.js?v=20260911-1';
+  s.dataset.solmusicMegaV2='1';
+  document.head.appendChild(s);
 })();
