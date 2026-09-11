@@ -1,7 +1,7 @@
 const WA="https://wa.me/5500000000000";
 const IG="https://www.instagram.com/lojasolmusic/";
 
-["carousel.css","mobile-header.css","mockup-desktop.css?v=20260911-1"].forEach(href=>{const link=document.createElement("link");link.rel="stylesheet";link.href=href;document.head.appendChild(link)});
+["carousel.css","mobile-header.css","mockup-desktop.css?v=20260911-1","blog-solmusic.css"].forEach(href=>{const link=document.createElement("link");link.rel="stylesheet";link.href=href;document.head.appendChild(link)});
 
 // Header mobile: arquitetura própria, preservando o desktop.
 const siteHeader=document.querySelector(".site-header");
@@ -93,6 +93,23 @@ document.querySelectorAll(".reelgrid a").forEach((a,i)=>{a.href=reelLinks[i]||IG
 const grid=document.getElementById("grid");if(grid)grid.innerHTML=products.map(p=>`<article class="card"><button class="heart" aria-label="Favoritar">♡</button><div class="pic"><img src="${p[3]}" alt="${p[0]} ${p[1]}"></div><div class="body"><h3>${p[0]}</h3><small>${p[1]}</small><div class="price">${p[2]}</div><small>à vista no Pix</small><div class="actions"><a href="#">Comprar →</a><a target="_blank" rel="noopener" href="${WA}?text=${encodeURIComponent("Olá! Vi no site "+p[0]+" "+p[1]+". Está disponível?")}">◉ WhatsApp</a></div></div></article>`).join("");
 
 const catalogTitle=document.querySelector('.catalog .section-head h2');if(catalogTitle)catalogTitle.textContent='ENCONTRE SEU SOM';
+
+const newsletter=document.querySelector('.newsletter');
+if(newsletter&&!document.querySelector('.blog-solmusic')){
+  const blog=document.createElement('section');
+  blog.className='blog-solmusic';
+  blog.id='blog';
+  blog.innerHTML=`<div class="blog-wrap">
+    <div class="blog-head"><div><span class="blog-kicker">BLOG SOLMUSIC</span><h2>CONTEÚDO QUE AMPLIFICA SUA PAIXÃO</h2><p class="blog-sub">Dicas, novidades, eventos e histórias do universo da música.</p></div><a class="blog-all" href="#blog">VER TODOS OS POSTS <span>→</span></a></div>
+    <article class="blog-feature"><a class="blog-feature-media" href="#blog"><img src="blog-solmusic-01.png" alt="Amplificador Meteoro em destaque"></a><div class="blog-feature-copy"><div class="blog-meta"><span class="cat">DICAS</span><span>11 de setembro de 2026</span><span>•</span><span>5 min de leitura</span></div><h3>Como regular seu amplificador e tirar o melhor som</h3><p>Ganhos, equalização, presença e volume: veja um ponto de partida simples para encontrar bons timbres e adaptar o amplificador ao seu estilo.</p><a class="blog-read" href="#blog">LER MAIS <span>→</span></a></div></article>
+    <div class="blog-grid">
+      <article class="blog-card"><a class="blog-card-media" href="#blog"><img src="blog-solmusic-02.png" alt="Evento musical em Caraguatatuba"></a><div class="blog-meta"><span class="cat">EVENTOS</span><span>5 de setembro de 2026</span><span>•</span><span>4 min</span></div><h3>SolMusic na estrada: música, encontros e histórias em Caraguá</h3><p>Uma passagem pelos bastidores, pelos músicos e pela energia dos eventos que movimentam a cena musical do Litoral Norte.</p><a class="blog-read" href="#blog">LER MAIS <span>→</span></a></article>
+      <article class="blog-card"><a class="blog-card-media" href="#blog"><img src="blog-solmusic-03.png" alt="Saxofones e instrumentos de sopro"></a><div class="blog-meta"><span class="cat">INSTRUMENTOS</span><span>28 de agosto de 2026</span><span>•</span><span>6 min</span></div><h3>Instrumentos de sopro: o que você precisa saber antes de escolher</h3><p>Saxofones, trompetes, flautas e clarinetes: diferenças básicas, cuidados e o que observar na hora de começar.</p><a class="blog-read" href="#blog">LER MAIS <span>→</span></a></article>
+      <article class="blog-card"><a class="blog-card-media" href="#blog"><img src="blog-solmusic-04.png" alt="Guitarra em bancada de manutenção"></a><div class="blog-meta"><span class="cat">MANUTENÇÃO</span><span>20 de agosto de 2026</span><span>•</span><span>5 min</span></div><h3>5 cuidados para manter sua guitarra sempre em dia</h3><p>Limpeza, cordas, regulagem e armazenamento: pequenos cuidados que ajudam a preservar tocabilidade, afinação e durabilidade.</p><a class="blog-read" href="#blog">LER MAIS <span>→</span></a></article>
+    </div>
+  </div>`;
+  newsletter.parentNode.insertBefore(blog,newsletter);
+}
 
 const setup=document.getElementById("setup");if(setup)setup.onsubmit=e=>{e.preventDefault();const b=document.getElementById("budget").value||"não informado",s=document.getElementById("style").value;window.open(WA+"?text="+encodeURIComponent(`Olá! Vim pelo site da SolMusic. Quero montar um setup para ${s} e tenho aproximadamente R$ ${b} disponíveis. Podem me ajudar?`),"_blank")};
 const sell=document.getElementById("sellwa");if(sell){sell.href=WA+"?text="+encodeURIComponent("Olá! Vim pelo site da SolMusic e quero solicitar uma avaliação do meu instrumento.");sell.target="_blank";sell.rel="noopener"}const search=document.getElementById("search");if(search)search.onsubmit=e=>{e.preventDefault();document.getElementById("products")?.scrollIntoView({behavior:"smooth"})};const themeToggle=document.getElementById("themeToggle");if(themeToggle)themeToggle.onclick=()=>document.body.classList.toggle("light-mode");
