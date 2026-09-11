@@ -36,7 +36,7 @@
         .mega-tab.mega-card{position:relative!important;min-height:92px!important;overflow:hidden!important;border:0!important;border-radius:8px!important;background:#14181b var(--mega-img) center/cover no-repeat!important;color:#fff!important;isolation:isolate!important;box-shadow:none!important;padding:0!important}
         .mega-tab.mega-card::before{content:''!important;position:absolute!important;inset:0!important;background:linear-gradient(180deg,rgba(5,7,8,.16),rgba(5,7,8,.76))!important;z-index:-1!important;transition:.22s ease!important}
         .mega-tab.mega-card::after{content:''!important;position:absolute!important;left:0!important;right:0!important;bottom:0!important;height:3px!important;background:#ffc928!important;transform:scaleX(0)!important;transform-origin:left!important;transition:.22s ease!important}
-        .mega-tab.mega-card span{position:absolute!important;left:16px!important;bottom:13px!important;font-family:'Inter',Arial,sans-serif!important;font-size:14px!important;font-weight:800!important;letter-spacing:-.1px!important;text-shadow:0 2px 10px rgba(0,0,0,.75)!important}
+        .mega-tab.mega-card span{position:absolute!important;left:16px!important;bottom:13px!important;font-family:'Manrope',Arial,sans-serif!important;font-size:14px!important;font-weight:800!important;letter-spacing:-.1px!important;text-shadow:0 2px 10px rgba(0,0,0,.75)!important}
         .mega-tab.mega-card:hover,.mega-tab.mega-card.is-active{transform:translateY(-1px)!important}
         .mega-tab.mega-card:hover::before,.mega-tab.mega-card.is-active::before{background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(5,7,8,.54))!important}
         .mega-tab.mega-card:hover::after,.mega-tab.mega-card.is-active::after{transform:scaleX(1)!important}
@@ -46,11 +46,12 @@
         .desktop-mega-menu .mega-col a{color:#e6e8e9!important;background:transparent!important}
         .desktop-mega-menu .mega-col a:hover{color:#ffc928!important;text-decoration:none!important}
         .desktop-mega-menu .mega-col a.mega-accent-link{color:#ffc928!important;font-weight:800!important;margin-top:3px!important}
-        .mega-promos{gap:12px!important}
-        .mega-promo.signature-art{background-image:url('tagima-edu-ardanuy-signature-solmusic-banner-v8-desktop.png')!important;background-position:center!important}
-        .mega-promo.guitar-art{background-image:url('IMG_4713.png')!important;background-position:center!important}
-        .mega-promo{min-height:146px!important;border:1px solid #2a2e32!important}
-        .mega-promo::before{background:linear-gradient(90deg,rgba(0,0,0,.84),rgba(0,0,0,.2))!important}
+        .mega-promos{position:relative!important;gap:16px!important;padding-left:18px!important;padding-right:18px!important}
+        .mega-promos::after{content:''!important;position:absolute!important;left:18px!important;right:18px!important;top:50%!important;height:1px!important;background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent)!important;transform:translateY(-.5px)!important;pointer-events:none!important}
+        .mega-promo.signature-art{background-image:url('banner-signature.png')!important;background-position:center!important}
+        .mega-promo.guitar-art{background-image:url('banner-sua-proxima-guitarra.png')!important;background-position:center!important}
+        .mega-promo{min-height:146px!important;border:1px solid #2a2e32!important;box-shadow:none!important}
+        .mega-promo::before{background:linear-gradient(90deg,rgba(0,0,0,.58),rgba(0,0,0,.08))!important}
       }`;
     document.getElementById(style.id)?.remove();
     document.head.appendChild(style);
