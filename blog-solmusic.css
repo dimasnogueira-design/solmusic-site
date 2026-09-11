@@ -28,36 +28,48 @@
 .blog-card .blog-read{padding:0}
 .newsletter{clear:both;position:relative;z-index:2}
 
-/* HEADER DESKTOP — normal no topo, compacto ao rolar e expande no hover */
-@supports (animation-timeline: scroll()){
+/* HEADER DESKTOP — compacto real após rolagem; expande no hover */
 @media(min-width:1001px){
-  .site-header .top{animation:smTopCompact linear both;animation-timeline:scroll(root block);animation-range:70px 150px;transition:min-height .24s ease,padding .24s ease,gap .24s ease!important}
-  .site-header .logo-img{animation:smLogoCompact linear both;animation-timeline:scroll(root block);animation-range:70px 150px;transition:width .24s ease,height .24s ease,flex-basis .24s ease!important}
-  .site-header .logo-copy small::before{animation:smLogoTypeCompact linear both;animation-timeline:scroll(root block);animation-range:70px 150px;transition:font-size .24s ease!important}
-  .site-header .logo-copy small::after{animation:smTaglineCompact linear both;animation-timeline:scroll(root block);animation-range:70px 150px;transition:opacity .18s ease,margin .24s ease,max-height .24s ease!important;overflow:hidden!important}
-  .site-header .search{animation:smSearchCompact linear both;animation-timeline:scroll(root block);animation-range:70px 150px;transition:height .24s ease!important}
-  .site-header .topwa{animation:smWaCompact linear both;animation-timeline:scroll(root block);animation-range:70px 150px;transition:min-height .24s ease,padding .24s ease!important}
-  .site-header .nav{animation:smNavCompact linear both;animation-timeline:scroll(root block);animation-range:70px 150px;transition:min-height .24s ease!important}
-  .site-header .nav>a{animation:smNavLinkCompact linear both;animation-timeline:scroll(root block);animation-range:70px 150px;transition:height .24s ease,padding .24s ease,font-size .24s ease!important}
-
-  .site-header:hover .top{min-height:92px!important;padding:12px 0!important;gap:28px!important}
-  .site-header:hover .logo-img{width:62px!important;height:62px!important;flex-basis:62px!important}
-  .site-header:hover .logo-copy small::before{font-size:31px!important}
-  .site-header:hover .logo-copy small::after{opacity:1!important;margin-top:8px!important;max-height:18px!important}
-  .site-header:hover .search{height:50px!important}
-  .site-header:hover .topwa{min-height:46px!important;padding:0 20px!important}
-  .site-header:hover .nav{min-height:55px!important}
-  .site-header:hover .nav>a{height:54px!important;padding:0 21px!important;font-size:12px!important}
-
-  @keyframes smTopCompact{from{min-height:92px;padding:12px 0;gap:28px}to{min-height:60px;padding:6px 0;gap:18px}}
-  @keyframes smLogoCompact{from{width:62px;height:62px;flex-basis:62px}to{width:42px;height:42px;flex-basis:42px}}
-  @keyframes smLogoTypeCompact{from{font-size:31px}to{font-size:22px}}
-  @keyframes smTaglineCompact{from{opacity:1;margin-top:8px;max-height:18px}to{opacity:0;margin-top:0;max-height:0}}
-  @keyframes smSearchCompact{from{height:50px}to{height:38px}}
-  @keyframes smWaCompact{from{min-height:46px;padding-left:20px;padding-right:20px}to{min-height:38px;padding-left:14px;padding-right:14px}}
-  @keyframes smNavCompact{from{min-height:55px}to{min-height:42px}}
-  @keyframes smNavLinkCompact{from{height:54px;padding-left:21px;padding-right:21px;font-size:12px}to{height:41px;padding-left:17px;padding-right:17px;font-size:11px}}
-}
+  .site-header,.site-header .top,.site-header .logo-img,.site-header .logo-copy,.site-header .search,.site-header .tools,.site-header .nav,.site-header .nav>a{
+    transition:all .26s cubic-bezier(.2,.8,.2,1)!important;
+  }
+  .site-header.sm-compact:not(:hover){box-shadow:0 8px 24px rgba(0,0,0,.28)!important}
+  .site-header.sm-compact:not(:hover) .top{
+    min-height:54px!important;
+    height:54px!important;
+    padding:5px 0!important;
+    grid-template-columns:56px 0 0!important;
+    gap:0!important;
+    overflow:hidden!important;
+  }
+  .site-header.sm-compact:not(:hover) .logo{width:56px!important;min-width:56px!important;gap:0!important}
+  .site-header.sm-compact:not(:hover) .logo-img{width:44px!important;height:44px!important;flex-basis:44px!important}
+  .site-header.sm-compact:not(:hover) .logo-copy{opacity:0!important;width:0!important;max-width:0!important;overflow:hidden!important;transform:translateX(-8px)!important;pointer-events:none!important}
+  .site-header.sm-compact:not(:hover) .search,
+  .site-header.sm-compact:not(:hover) .tools{
+    opacity:0!important;
+    visibility:hidden!important;
+    width:0!important;
+    max-width:0!important;
+    min-width:0!important;
+    height:0!important;
+    max-height:0!important;
+    overflow:hidden!important;
+    pointer-events:none!important;
+    transform:translateY(-6px) scale(.96)!important;
+  }
+  .site-header.sm-compact:not(:hover) .nav{
+    min-height:0!important;
+    height:0!important;
+    padding-top:0!important;
+    padding-bottom:0!important;
+    border-top:0!important;
+    border-bottom:0!important;
+    opacity:0!important;
+    overflow:hidden!important;
+    pointer-events:none!important;
+  }
+  .site-header.sm-compact:not(:hover) .nav>a{height:0!important;padding-top:0!important;padding-bottom:0!important;font-size:0!important;opacity:0!important}
 }
 
 @media(max-width:900px){
