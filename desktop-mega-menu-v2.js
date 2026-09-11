@@ -33,7 +33,7 @@
       @media(min-width:1001px){
         .desktop-mega-menu{background:#0b0d0f!important;border-color:#292d31!important;color:#fff!important}
         .mega-tabs{grid-template-columns:repeat(6,1fr)!important;gap:1px!important;padding:8px!important;background:#0b0d0f!important;border-bottom:1px solid #292d31!important}
-        .mega-tab.mega-card{position:relative!important;min-height:92px!important;overflow:hidden!important;border:0!important;border-radius:8px!important;background:#14181b var(--mega-img) center/cover no-repeat!important;color:#fff!important;isolation:isolate!important;box-shadow:none!important;padding:0!important}
+        .mega-tab.mega-card{display:block!important;position:relative!important;min-height:92px!important;overflow:hidden!important;border:0!important;border-radius:8px!important;background:#14181b var(--mega-img) center/cover no-repeat!important;color:#fff!important;isolation:isolate!important;box-shadow:none!important;padding:0!important}
         .mega-tab.mega-card::before{content:''!important;position:absolute!important;inset:0!important;background:linear-gradient(180deg,rgba(5,7,8,.16),rgba(5,7,8,.76))!important;z-index:-1!important;transition:.22s ease!important}
         .mega-tab.mega-card::after{content:''!important;position:absolute!important;left:0!important;right:0!important;bottom:0!important;height:3px!important;background:#ffc928!important;transform:scaleX(0)!important;transform-origin:left!important;transition:.22s ease!important}
         .mega-tab.mega-card span{position:absolute!important;left:16px!important;bottom:13px!important;font-family:'Manrope',Arial,sans-serif!important;font-size:14px!important;font-weight:800!important;letter-spacing:-.1px!important;text-shadow:0 2px 10px rgba(0,0,0,.75)!important}
@@ -47,11 +47,11 @@
         .desktop-mega-menu .mega-col a:hover{color:#ffc928!important;text-decoration:none!important}
         .desktop-mega-menu .mega-col a.mega-accent-link{color:#ffc928!important;font-weight:800!important;margin-top:3px!important}
         .mega-promos{position:relative!important;gap:16px!important;padding-left:18px!important;padding-right:18px!important}
-        .mega-promos::after{content:''!important;position:absolute!important;left:18px!important;right:18px!important;top:50%!important;height:1px!important;background:linear-gradient(90deg,transparent,rgba(255,255,255,.12),transparent)!important;transform:translateY(-.5px)!important;pointer-events:none!important}
-        .mega-promo.signature-art{background-image:url('banner-signature.png')!important;background-position:center!important}
-        .mega-promo.guitar-art{background-image:url('banner-sua-proxima-guitarra.png')!important;background-position:center!important}
-        .mega-promo{min-height:146px!important;border:1px solid #2a2e32!important;box-shadow:none!important}
-        .mega-promo::before{background:linear-gradient(90deg,rgba(0,0,0,.58),rgba(0,0,0,.08))!important}
+        .mega-promos::after{content:''!important;position:absolute!important;left:18px!important;right:18px!important;top:50%!important;height:1px!important;background:linear-gradient(90deg,transparent,rgba(255,255,255,.10),transparent)!important;transform:translateY(-.5px)!important;pointer-events:none!important}
+        .site-header .nav .desktop-mega-menu .mega-promos .mega-promo.signature-art{background:url('banner-signature.png') center/cover no-repeat!important}
+        .site-header .nav .desktop-mega-menu .mega-promos .mega-promo.guitar-art{background:url('banner-sua-proxima-guitarra.png') center/cover no-repeat!important}
+        .site-header .nav .desktop-mega-menu .mega-promos .mega-promo{min-height:146px!important;border:1px solid #2a2e32!important;box-shadow:none!important}
+        .mega-promo::before{background:linear-gradient(90deg,rgba(0,0,0,.46),rgba(0,0,0,.04))!important}
       }`;
     document.getElementById(style.id)?.remove();
     document.head.appendChild(style);
