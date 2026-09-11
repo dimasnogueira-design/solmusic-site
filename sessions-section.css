@@ -1,0 +1,185 @@
+/* SOLMUSIC SESSIONS — imagem limpa ao fundo + HTML funcional */
+@media (min-width:1001px){
+  .sessions{
+    position:relative!important;
+    min-height:470px!important;
+    padding:0!important;
+    overflow:hidden!important;
+    background:#090d10 url('banner-soulmusic-sessions.png') center center/cover no-repeat!important;
+    border-top:1px solid #1c2328!important;
+    border-bottom:1px solid #1c2328!important;
+  }
+  .sessions::before{
+    content:""!important;
+    position:absolute!important;
+    inset:0!important;
+    pointer-events:none!important;
+    background:linear-gradient(90deg,rgba(3,7,10,.56) 0%,rgba(3,7,10,.22) 25%,rgba(3,7,10,.03) 54%,rgba(3,7,10,.12) 100%)!important;
+  }
+  .session-grid{
+    position:relative!important;
+    z-index:2!important;
+    width:min(94%,1500px)!important;
+    min-height:470px!important;
+    margin:auto!important;
+    display:grid!important;
+    grid-template-columns:29% 39% 32%!important;
+    gap:0!important;
+    align-items:center!important;
+  }
+  .session-copy{
+    align-self:center!important;
+    max-width:340px!important;
+    padding:0 0 0 6px!important;
+    font-family:'Manrope',Arial,sans-serif!important;
+    text-shadow:0 3px 18px rgba(0,0,0,.58)!important;
+  }
+  .session-copy h2{
+    margin:0 0 18px!important;
+    font-family:'Manrope',Arial,sans-serif!important;
+    font-size:46px!important;
+    line-height:.86!important;
+    letter-spacing:-2px!important;
+    font-weight:900!important;
+    color:#ffc928!important;
+  }
+  .session-copy h2 span{color:#fff!important}
+  .session-copy p{
+    margin:0 0 22px!important;
+    color:#fff!important;
+    font-size:14px!important;
+    line-height:1.42!important;
+    font-weight:600!important;
+  }
+  .session-copy>div{
+    display:flex!important;
+    align-items:center!important;
+    gap:10px!important;
+    flex-wrap:nowrap!important;
+  }
+  .session-copy .btn{
+    min-height:44px!important;
+    padding:0 16px!important;
+    border-radius:7px!important;
+    font-family:'Manrope',Arial,sans-serif!important;
+    font-size:9px!important;
+    font-weight:900!important;
+    white-space:nowrap!important;
+    text-shadow:none!important;
+  }
+  .session-copy .outline{
+    background:rgba(5,9,12,.72)!important;
+    border-color:rgba(255,255,255,.72)!important;
+    backdrop-filter:blur(4px)!important;
+  }
+  .session-photo{
+    position:relative!important;
+    min-height:470px!important;
+    background:transparent!important;
+    border-radius:0!important;
+    pointer-events:none!important;
+  }
+  .session-photo::before{display:none!important}
+  .session-photo button{
+    position:absolute!important;
+    left:57%!important;
+    top:48%!important;
+    transform:translate(-50%,-50%)!important;
+    width:62px!important;
+    height:62px!important;
+    border-radius:50%!important;
+    border:2px solid rgba(255,255,255,.92)!important;
+    background:rgba(0,0,0,.32)!important;
+    color:#fff!important;
+    font-size:19px!important;
+    display:grid!important;
+    place-items:center!important;
+    pointer-events:auto!important;
+    cursor:pointer!important;
+    backdrop-filter:blur(3px)!important;
+    box-shadow:0 7px 24px rgba(0,0,0,.22)!important;
+  }
+  .session-photo i{display:none!important}
+
+  .session-side{
+    align-self:center!important;
+    display:grid!important;
+    grid-template-rows:150px 150px!important;
+    gap:14px!important;
+    padding:0 0 0 18px!important;
+    font-family:'Manrope',Arial,sans-serif!important;
+  }
+  .session-side article{
+    position:relative!important;
+    min-height:0!important;
+    height:150px!important;
+    padding:18px 22px!important;
+    overflow:hidden!important;
+    border:1px solid rgba(113,126,135,.65)!important;
+    border-radius:11px!important;
+    background:linear-gradient(100deg,rgba(6,10,13,.92),rgba(10,14,17,.74))!important;
+    backdrop-filter:blur(5px)!important;
+    box-shadow:0 12px 28px rgba(0,0,0,.17)!important;
+  }
+  .session-side article::before{
+    content:""!important;
+    position:absolute!important;
+    inset:0!important;
+    z-index:0!important;
+    background:linear-gradient(90deg,rgba(4,8,11,.96) 0%,rgba(4,8,11,.80) 56%,rgba(4,8,11,.35) 100%)!important;
+    pointer-events:none!important;
+  }
+  .session-side article::after{display:none!important}
+  .session-side article>*{position:relative!important;z-index:2!important}
+  .session-side small{
+    color:#ffc928!important;
+    font-size:9px!important;
+    font-weight:900!important;
+    letter-spacing:.05em!important;
+  }
+  .session-side b{
+    display:block!important;
+    margin-top:8px!important;
+    color:#fff!important;
+    font-size:17px!important;
+    line-height:1.14!important;
+  }
+  .session-side p{
+    margin:7px 0!important;
+    color:#d1d6d9!important;
+    font-size:10px!important;
+    line-height:1.32!important;
+  }
+  .session-side article>span{display:none!important}
+  .session-side a{
+    color:#ffc928!important;
+    font-size:10px!important;
+    font-weight:900!important;
+  }
+  .date{
+    float:left!important;
+    margin:8px 13px 4px 0!important;
+    padding:7px 10px!important;
+    min-width:56px!important;
+    border:2px solid #ffc928!important;
+    border-radius:7px!important;
+    text-align:center!important;
+  }
+  .date b{margin:0!important;color:#ffc928!important;font-size:28px!important;line-height:1!important}
+  .date span{color:#ffc928!important;font-size:9px!important;font-weight:900!important}
+
+  /* Área reservada para futuras artes dos cards laterais.
+     Criar cada arte em 960 x 300 px (proporção 3,2:1). */
+  .session-side article:first-child{background-image:none!important}
+  .session-side article:nth-child(2){background-image:none!important}
+}
+
+@media (min-width:1001px) and (max-width:1250px){
+  .sessions,.session-grid,.session-photo{min-height:420px!important}
+  .session-grid{grid-template-columns:31% 36% 33%!important}
+  .session-copy h2{font-size:39px!important}
+  .session-copy p{font-size:12px!important}
+  .session-copy .btn{padding:0 11px!important;font-size:8px!important}
+  .session-side{grid-template-rows:138px 138px!important}
+  .session-side article{height:138px!important;padding:15px 18px!important}
+}
