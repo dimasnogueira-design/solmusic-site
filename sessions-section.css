@@ -176,9 +176,19 @@
     background-repeat:no-repeat!important;
   }
   .session-side article:first-child::before{
-    background:linear-gradient(90deg,rgba(4,8,11,.92) 0%,rgba(4,8,11,.67) 48%,rgba(4,8,11,.12) 100%)!important;
+    background:linear-gradient(90deg,rgba(4,8,11,.88) 0%,rgba(4,8,11,.58) 48%,rgba(4,8,11,.08) 100%)!important;
   }
-  .session-side article:nth-child(2){background-image:none!important}
+
+  /* Arte do card Próxima Jam Session */
+  .session-side article:nth-child(2){
+    background-image:url('banner-tagima-jam-session-data.png')!important;
+    background-position:center center!important;
+    background-size:cover!important;
+    background-repeat:no-repeat!important;
+  }
+  .session-side article:nth-child(2)::before{
+    background:linear-gradient(90deg,rgba(4,8,11,.86) 0%,rgba(4,8,11,.58) 46%,rgba(4,8,11,.08) 100%)!important;
+  }
 }
 
 @media (min-width:1001px) and (max-width:1250px){
