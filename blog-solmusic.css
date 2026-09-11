@@ -1,0 +1,49 @@
+/* BLOG SOLMUSIC — editorial clean inspirado em lojas premium */
+.blog-solmusic{background:#f6f6f2;color:#111;padding:44px 0 48px;font-family:'Manrope',Arial,Helvetica,sans-serif;border-top:1px solid #e2e2dc}
+.blog-solmusic .blog-wrap{width:min(93.2%,1440px);margin:auto}
+.blog-solmusic .blog-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:26px}
+.blog-solmusic .blog-kicker{display:block;color:#ad7d00;font-size:11px;font-weight:800;letter-spacing:.28em;margin-bottom:8px}
+.blog-solmusic h2{margin:0;font-size:42px;line-height:.98;letter-spacing:-1.8px;font-weight:900}
+.blog-solmusic .blog-sub{margin:10px 0 0;color:#5c5c58;font-size:14px}
+.blog-solmusic .blog-all{height:46px;padding:0 22px;border:1px solid #151515;border-radius:8px;display:inline-flex;align-items:center;gap:18px;font-size:11px;font-weight:800;letter-spacing:.06em;background:#fff;transition:.2s ease}
+.blog-solmusic .blog-all:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.08)}
+.blog-feature{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(320px,.85fr);gap:28px;align-items:center;margin-bottom:30px}
+.blog-feature-media,.blog-card-media{overflow:hidden;border-radius:20px;background:#ddd;position:relative}
+.blog-feature-media{aspect-ratio:16/9}
+.blog-feature-media img,.blog-card-media img{width:100%;height:100%;display:block;object-fit:cover;transition:transform .45s cubic-bezier(.2,.8,.2,1),filter .3s ease}
+.blog-feature-media:hover img,.blog-card:hover img{transform:scale(1.035);filter:brightness(1.04)}
+.blog-feature-copy{padding:8px 4px}
+.blog-meta{display:flex;align-items:center;gap:9px;flex-wrap:wrap;color:#666;font-size:11px;margin-bottom:12px}
+.blog-meta .cat{height:auto!important;padding:0!important;background:none!important;box-shadow:none!important;color:#ad7d00!important;font-size:10px!important;font-weight:900!important;letter-spacing:.16em!important;text-transform:uppercase!important}
+.blog-meta .cat:before{display:none!important}
+.blog-feature-copy h3{margin:0 0 14px;font-size:31px;line-height:1.08;letter-spacing:-1px}
+.blog-feature-copy p{font-size:15px;line-height:1.55;color:#555;margin:0 0 20px}
+.blog-read{display:inline-flex;align-items:center;gap:16px;font-size:11px;font-weight:900;letter-spacing:.05em}
+.blog-feature-copy .blog-read{background:#ffc928;padding:13px 18px;border-radius:8px}
+.blog-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.blog-card{display:block;color:#111}
+.blog-card-media{aspect-ratio:16/9;margin-bottom:13px;border-radius:18px}
+.blog-card h3{font-size:20px;line-height:1.08;letter-spacing:-.45px;margin:5px 0 9px}
+.blog-card p{font-size:13px;line-height:1.5;color:#62625e;margin:0 0 14px}
+.blog-card .blog-read{padding:0}
+@media(max-width:900px){
+  .blog-solmusic{padding:34px 0 38px}
+  .blog-solmusic h2{font-size:33px}
+  .blog-feature{grid-template-columns:1fr;gap:18px}
+  .blog-feature-copy{padding:0}
+  .blog-grid{grid-template-columns:1fr 1fr}
+  .blog-card:last-child{grid-column:1/-1}
+}
+@media(max-width:700px){
+  .blog-solmusic{padding:28px 0 32px}
+  .blog-solmusic .blog-head{align-items:flex-start;flex-direction:column;margin-bottom:20px}
+  .blog-solmusic h2{font-size:29px;letter-spacing:-1px}
+  .blog-solmusic .blog-sub{font-size:12px}
+  .blog-solmusic .blog-all{height:40px}
+  .blog-feature-media{border-radius:14px}
+  .blog-feature-copy h3{font-size:25px}
+  .blog-feature-copy p{font-size:13px}
+  .blog-grid{grid-template-columns:1fr;gap:24px}
+  .blog-card:last-child{grid-column:auto}
+  .blog-card-media{border-radius:14px}
+}
