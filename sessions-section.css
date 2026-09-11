@@ -135,20 +135,7 @@
     pointer-events:none!important;
     transition:background .28s ease,opacity .28s ease!important;
   }
-  .session-side article::after{
-    content:""!important;
-    position:absolute!important;
-    left:7%!important;
-    right:7%!important;
-    bottom:-1px!important;
-    height:2px!important;
-    z-index:3!important;
-    opacity:0!important;
-    background:linear-gradient(90deg,transparent,rgba(255,201,40,.95),transparent)!important;
-    box-shadow:0 5px 18px rgba(255,201,40,.50)!important;
-    pointer-events:none!important;
-    transition:opacity .28s ease!important;
-  }
+  .session-side article::after{display:none!important}
   .session-side article>*{position:relative!important;z-index:2!important}
   .session-side article:hover{
     transform:translateY(-7px) scale(1.012)!important;
@@ -157,7 +144,6 @@
     background-size:116% auto!important;
   }
   .session-side article:hover::before{opacity:.78!important}
-  .session-side article:hover::after{opacity:1!important}
   .session-side small{
     color:#ffc928!important;
     font-size:9px!important;
