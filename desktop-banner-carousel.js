@@ -23,11 +23,11 @@
   const nav=header?.querySelector('.nav');
   if(!header||!nav||nav.querySelector('.desktop-extra-menu')) return;
   const links=[...nav.querySelectorAll(':scope > a')];
-  const mainMega=nav.querySelector('.desktop-mega-menu');
   const mainTrigger=links[0];
 
   const closeMainMega=()=>{
-    mainMega?.classList.remove('is-open');
+    const mega=nav.querySelector('.desktop-mega-menu');
+    mega?.classList.remove('is-open');
     mainTrigger?.classList.remove('mega-open');
   };
   const closeExtraMenus=()=>{
@@ -81,13 +81,11 @@
   document.addEventListener('keydown',e=>{if(e.key==='Escape'){closeExtraMenus();closeMainMega();}});
 })();
 
-// Load the visual upgrade for the Instrumentos mega menu. This file already exists in the repo,
-// but index.html did not reference it, so the uploaded promo artwork never reached the live menu.
 (()=>{
   if(!window.matchMedia('(min-width:1001px)').matches) return;
   if(document.querySelector('script[data-solmusic-mega-v2]')) return;
   const s=document.createElement('script');
-  s.src='desktop-mega-menu-v2.js?v=20260911-1';
+  s.src='desktop-mega-menu-v2.js?v=20260911-2';
   s.dataset.solmusicMegaV2='1';
   document.head.appendChild(s);
 })();
