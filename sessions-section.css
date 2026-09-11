@@ -119,3 +119,16 @@
   .reelgrid::-webkit-scrollbar{display:none!important}
   .reelgrid a{flex:0 0 78%!important;scroll-snap-align:center!important}
 }
+
+/* DIRETO DA SOLMUSIC — cabeçalho simplificado */
+.reels h2{font-size:0!important;display:flex!important;align-items:center!important;gap:0!important;line-height:1!important}
+.reels h2::before{content:"DIRETO DA "!important;display:inline-flex!important;align-items:center!important;min-height:31px!important;padding-left:41px!important;color:#fff!important;font-family:Arial,Helvetica,sans-serif!important;font-size:24px!important;font-style:normal!important;font-weight:800!important;letter-spacing:-.4px!important;background-position:left center!important;background-repeat:no-repeat!important;background-size:30px 30px!important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23ffbe0b'/%3E%3Cstop offset='.45' stop-color='%23ff006e'/%3E%3Cstop offset='1' stop-color='%23833ab4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='2' y='2' width='28' height='28' rx='8' fill='url(%23g)'/%3E%3Crect x='8.2' y='8.2' width='15.6' height='15.6' rx='4.5' fill='none' stroke='white' stroke-width='2.2'/%3E%3Ccircle cx='16' cy='16' r='4' fill='none' stroke='white' stroke-width='2.2'/%3E%3Ccircle cx='22.2' cy='9.9' r='1.3' fill='white'/%3E%3C/svg%3E")!important}
+.reels h2 em{font-size:24px!important;color:#ffc928!important;font-style:normal!important;font-weight:800!important;letter-spacing:-.4px!important}
+.filters{margin:16px 0 13px!important;display:block!important}
+.filters button{display:none!important}
+.filters::before{content:"ÚLTIMOS REELS"!important;display:inline-block!important;color:#ffc928!important;font-size:10px!important;font-weight:900!important;letter-spacing:.16em!important;text-transform:uppercase!important}
+@media(max-width:700px){
+  .reels h2::before,.reels h2 em{font-size:21px!important}
+  .reels h2::before{min-height:28px!important;padding-left:37px!important;background-size:27px 27px!important}
+  .filters{margin:14px 0 11px!important}
+}
