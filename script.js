@@ -34,11 +34,7 @@ if(siteHeader){
     let ticking=false;
     const syncHeader=()=>{
       const y=window.scrollY;
-      if(y>90){
-        siteHeader.classList.add("mobile-search-collapsed");
-      }else{
-        siteHeader.classList.remove("mobile-search-collapsed");
-      }
+      if(y>90){siteHeader.classList.add("mobile-search-collapsed")}else{siteHeader.classList.remove("mobile-search-collapsed")}
       lastY=y;ticking=false;
     };
     window.addEventListener("scroll",()=>{if(!ticking){requestAnimationFrame(syncHeader);ticking=true}},{passive:true});
@@ -64,7 +60,6 @@ if(oldHero&&!isMobileHero){
  let touchX=null;hero.addEventListener("touchstart",e=>{touchX=e.changedTouches[0].clientX},{passive:true});hero.addEventListener("touchend",e=>{if(touchX===null)return;const dx=e.changedTouches[0].clientX-touchX;if(Math.abs(dx)>45){show(current+(dx<0?1:-1));start()}touchX=null},{passive:true});start();
 }
 
-// Carrossel mobile: autoplay, swipe e setas discretas.
 const mobileCarousel=document.querySelector('.mobile-banner-carousel');
 if(mobileCarousel){
   const track=mobileCarousel.querySelector('.mobile-banner-track');
@@ -85,11 +80,16 @@ if(mobileCarousel){
   start();
 }
 
-const products=[["Tagima Signature","Série Especial","R$ 3.590,00","p1"],["Fender","Player Stratocaster","R$ 5.990,00","p2"],["LTD","EC-256","R$ 4.290,00","p3"],["S by Solar","A2.6C","R$ 3.990,00","p4"],["Takamine","GD11MCE","R$ 2.690,00","p5"]];
+const products=[
+  ["Tagima Signature","Série Especial","R$ 3.590,00","produto-01.png"],
+  ["Fender","Player Stratocaster","R$ 5.990,00","produto-02.png"],
+  ["LTD","EC-256","R$ 4.290,00","produto-03.png"],
+  ["S by Solar","A2.6C","R$ 3.990,00","produto-04.png"],
+  ["Takamine","GD11MCE","R$ 2.690,00","produto-05.png"]
+];
 document.querySelectorAll("[data-wa]").forEach(a=>{a.href=WA+"?text="+encodeURIComponent("Olá! Vim pelo site da SolMusic e gostaria de falar com um especialista.");a.target="_blank";a.rel="noopener"});document.querySelectorAll(".reelgrid a").forEach(a=>{a.href=IG;a.rel="noopener"});
-const grid=document.getElementById("grid");if(grid)grid.innerHTML=products.map(p=>`<article class="card"><button class="heart" aria-label="Favoritar">♡</button><div class="pic ${p[3]}"></div><div class="body"><h3>${p[0]}</h3><small>${p[1]}</small><div class="price">${p[2]}</div><small>à vista no Pix</small><div class="actions"><a href="#">Comprar →</a><a target="_blank" rel="noopener" href="${WA}?text=${encodeURIComponent("Olá! Vi no site "+p[0]+" "+p[1]+". Está disponível?")}">◉ WhatsApp</a></div></div></article>`).join("");
+const grid=document.getElementById("grid");if(grid)grid.innerHTML=products.map(p=>`<article class="card"><button class="heart" aria-label="Favoritar">♡</button><div class="pic"><img src="${p[3]}" alt="${p[0]} ${p[1]}"></div><div class="body"><h3>${p[0]}</h3><small>${p[1]}</small><div class="price">${p[2]}</div><small>à vista no Pix</small><div class="actions"><a href="#">Comprar →</a><a target="_blank" rel="noopener" href="${WA}?text=${encodeURIComponent("Olá! Vi no site "+p[0]+" "+p[1]+". Está disponível?")}">◉ WhatsApp</a></div></div></article>`).join("");
 
-// O mockup aprovado é a fonte da verdade para o bloco abaixo do hero.
 const catalogTitle=document.querySelector('.catalog .section-head h2');if(catalogTitle)catalogTitle.textContent='ENCONTRE SEU SOM';
 
 const setup=document.getElementById("setup");if(setup)setup.onsubmit=e=>{e.preventDefault();const b=document.getElementById("budget").value||"não informado",s=document.getElementById("style").value;window.open(WA+"?text="+encodeURIComponent(`Olá! Vim pelo site da SolMusic. Quero montar um setup para ${s} e tenho aproximadamente R$ ${b} disponíveis. Podem me ajudar?`),"_blank")};
