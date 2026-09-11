@@ -1,4 +1,9 @@
+@import url('visual-assets.css');
+
 /* BLOCO DESKTOP — reprodução do mockup aprovado a partir da faixa de benefícios */
+.float{font-size:0!important;display:grid!important;place-items:center!important}
+.float::before{content:"";width:25px;height:25px;background:no-repeat center/contain url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath fill='white' d='M32 6C18.2 6 7 16.7 7 29.9c0 4.7 1.5 9.2 4.2 13L7.4 57l14.8-3.7c3 1.5 6.4 2.3 9.8 2.3 13.8 0 25-10.7 25-23.9S45.8 6 32 6zm0 44.8c-3 0-6-.8-8.6-2.2l-1.2-.6-8.8 2.2 2.3-8.4-.8-1.2c-2.1-3.1-3.2-6.7-3.2-10.4C11.7 19.5 20.8 11 32 11s20.3 8.5 20.3 19S43.2 50.8 32 50.8zm11.2-14.5c-.6-.3-3.6-1.8-4.2-2-.6-.2-1-.3-1.5.3-.4.6-1.6 2-2 2.4-.4.4-.7.4-1.3.1-3.6-1.7-6-3-8.4-6.9-.6-1.1.6-1 1.8-3.3.2-.4.1-.8-.1-1.1-.1-.3-1.5-3.4-2-4.7-.5-1.3-1.1-1.1-1.5-1.1h-1.3c-.4 0-1.1.2-1.7.8-.6.6-2.2 2.1-2.2 5.1s2.3 6 2.6 6.4c.3.4 4.5 6.6 10.8 9.2 4 .9 5.6 1 7.6.8 1.2-.2 3.6-1.4 4.1-2.8.5-1.4.5-2.6.4-2.8-.2-.2-.6-.3-1.1-.6z'/%3E%3C/svg%3E")}
+
 @media (min-width:1001px){
   .trust{background:#f4f4f2!important;border:0!important;color:#17191c!important}
   .trust-grid{width:min(94%,1500px)!important;min-height:54px!important;grid-template-columns:repeat(5,1fr)!important;font-family:'Manrope',Arial,sans-serif!important;font-size:11px!important;font-weight:600!important;gap:14px!important}
