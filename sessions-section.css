@@ -120,6 +120,11 @@
     background:linear-gradient(100deg,rgba(6,10,13,.92),rgba(10,14,17,.74))!important;
     backdrop-filter:blur(5px)!important;
     box-shadow:0 12px 28px rgba(0,0,0,.17)!important;
+    cursor:pointer!important;
+    transform:translateY(0) scale(1)!important;
+    transform-origin:center center!important;
+    transition:transform .28s cubic-bezier(.2,.8,.2,1),border-color .28s ease,box-shadow .28s ease,background-size .45s cubic-bezier(.2,.8,.2,1),background-position .45s ease!important;
+    will-change:transform,background-size!important;
   }
   .session-side article::before{
     content:""!important;
@@ -128,9 +133,31 @@
     z-index:0!important;
     background:linear-gradient(90deg,rgba(4,8,11,.96) 0%,rgba(4,8,11,.80) 56%,rgba(4,8,11,.35) 100%)!important;
     pointer-events:none!important;
+    transition:background .28s ease,opacity .28s ease!important;
   }
-  .session-side article::after{display:none!important}
+  .session-side article::after{
+    content:""!important;
+    position:absolute!important;
+    left:7%!important;
+    right:7%!important;
+    bottom:-1px!important;
+    height:2px!important;
+    z-index:3!important;
+    opacity:0!important;
+    background:linear-gradient(90deg,transparent,rgba(255,201,40,.95),transparent)!important;
+    box-shadow:0 5px 18px rgba(255,201,40,.50)!important;
+    pointer-events:none!important;
+    transition:opacity .28s ease!important;
+  }
   .session-side article>*{position:relative!important;z-index:2!important}
+  .session-side article:hover{
+    transform:translateY(-7px) scale(1.012)!important;
+    border-color:rgba(255,214,82,.88)!important;
+    box-shadow:0 8px 18px rgba(0,0,0,.22),0 18px 34px rgba(0,0,0,.34),0 18px 30px rgba(255,201,40,.12)!important;
+    background-size:116% auto!important;
+  }
+  .session-side article:hover::before{opacity:.78!important}
+  .session-side article:hover::after{opacity:1!important}
   .session-side small{
     color:#ffc928!important;
     font-size:9px!important;
@@ -172,22 +199,28 @@
   .session-side article:first-child{
     background-image:url('banner-tagima-signature-na-pratica.png')!important;
     background-position:center center!important;
-    background-size:cover!important;
+    background-size:110% auto!important;
     background-repeat:no-repeat!important;
   }
   .session-side article:first-child::before{
     background:linear-gradient(90deg,rgba(4,8,11,.88) 0%,rgba(4,8,11,.58) 48%,rgba(4,8,11,.08) 100%)!important;
+  }
+  .session-side article:first-child:hover::before{
+    background:linear-gradient(90deg,rgba(4,8,11,.73) 0%,rgba(4,8,11,.37) 47%,rgba(4,8,11,.02) 100%)!important;
   }
 
   /* Arte do card Próxima Jam Session */
   .session-side article:nth-child(2){
     background-image:url('banner-tagima-jam-session-data.png')!important;
     background-position:center center!important;
-    background-size:cover!important;
+    background-size:110% auto!important;
     background-repeat:no-repeat!important;
   }
   .session-side article:nth-child(2)::before{
     background:linear-gradient(90deg,rgba(4,8,11,.86) 0%,rgba(4,8,11,.58) 46%,rgba(4,8,11,.08) 100%)!important;
+  }
+  .session-side article:nth-child(2):hover::before{
+    background:linear-gradient(90deg,rgba(4,8,11,.72) 0%,rgba(4,8,11,.36) 45%,rgba(4,8,11,.02) 100%)!important;
   }
 }
 
