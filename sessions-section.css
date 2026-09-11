@@ -63,3 +63,59 @@
   .session-side article:nth-child(2) p{font-size:11.5px!important}
   .session-side article:nth-child(2) a{font-size:11.5px!important}
 }
+
+/* DIRETO DA SOLMUSIC — 5 capas reais dos Reels */
+.reelgrid a{
+  position:relative!important;
+  overflow:hidden!important;
+  isolation:isolate!important;
+  aspect-ratio:2/3!important;
+  background:#070b0f!important;
+  border:1px solid rgba(255,255,255,.08)!important;
+  box-shadow:0 12px 28px rgba(0,0,0,.20)!important;
+  transform:translateY(0) scale(1)!important;
+  transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s ease,border-color .3s ease!important;
+}
+.reelgrid a::before{
+  content:""!important;
+  position:absolute!important;
+  inset:0!important;
+  z-index:0!important;
+  background-position:center!important;
+  background-size:cover!important;
+  background-repeat:no-repeat!important;
+  transform:scale(1)!important;
+  filter:brightness(1)!important;
+  transition:transform .48s cubic-bezier(.2,.8,.2,1),filter .3s ease!important;
+}
+.reelgrid .r1::before{background-image:url('reel-solmusic-01.png')!important}
+.reelgrid .r2::before{background-image:url('reel-solmusic-02.png')!important}
+.reelgrid .r3::before{background-image:url('reel-solmusic-03.png')!important}
+.reelgrid .r4::before{background-image:url('reel-solmusic-04.png')!important}
+.reelgrid .r5::before{background-image:url('reel-solmusic-05.png')!important}
+.reelgrid a::after{
+  content:""!important;
+  position:absolute!important;
+  left:0!important;
+  right:0!important;
+  bottom:0!important;
+  height:3px!important;
+  z-index:3!important;
+  background:#ffc928!important;
+  transform:scaleX(0)!important;
+  transform-origin:left center!important;
+  transition:transform .3s ease!important;
+}
+.reelgrid a>.play,.reelgrid a>div{display:none!important}
+.reelgrid a:hover{
+  transform:translateY(-7px) scale(1.012)!important;
+  border-color:rgba(255,201,40,.82)!important;
+  box-shadow:0 18px 36px rgba(0,0,0,.36),0 12px 28px rgba(255,201,40,.10)!important;
+}
+.reelgrid a:hover::before{transform:scale(1.045)!important;filter:brightness(1.08)!important}
+.reelgrid a:hover::after{transform:scaleX(1)!important}
+@media(max-width:700px){
+  .reelgrid{display:flex!important;overflow-x:auto!important;gap:12px!important;scroll-snap-type:x mandatory!important;padding:2px 2px 12px!important;scrollbar-width:none!important}
+  .reelgrid::-webkit-scrollbar{display:none!important}
+  .reelgrid a{flex:0 0 78%!important;scroll-snap-align:center!important}
+}
