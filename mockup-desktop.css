@@ -27,8 +27,9 @@
   .cat small{font-family:'Manrope',Arial,sans-serif!important;font-size:10px!important;margin-top:4px!important}
 
   .duo{grid-template-columns:1fr 1fr!important;gap:16px!important;margin:16px 0 24px!important}
-  .duo article{height:190px!important;border-radius:6px!important;padding:0!important;background-image:url('assets/promo-strip.webp')!important;background-repeat:no-repeat!important;background-size:1210px 190px!important;background-color:#111!important;box-shadow:none!important}
-  .promo{background-position:left top!important}.club{background-position:right top!important}
+  .duo article{height:190px!important;border-radius:6px!important;padding:0!important;background-color:#111!important;background-position:center!important;background-size:cover!important;background-repeat:no-repeat!important;box-shadow:none!important;overflow:hidden!important}
+  .duo .promo{background-image:url('so-no-site-desconto-soulmusic.png')!important}
+  .duo .club{background-image:url('soolmusic-club.png')!important}
   .promo-content,.club-content{height:100%!important}
   .promo-content>*{visibility:hidden!important}
   .club-content>*{visibility:hidden!important}
