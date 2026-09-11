@@ -29,12 +29,9 @@
   .date{float:left!important;margin:7px 14px 4px 0!important;padding:7px 10px!important;min-width:66px!important;border:2px solid #ffc928!important;border-radius:7px!important;text-align:center!important}
   .date b{margin:0!important;color:#ffc928!important;font-size:34px!important;line-height:1!important}
   .date span{color:#ffc928!important;font-size:11px!important;font-weight:900!important}
-
-  /* Jam Session — texto maior e mais legível */
   .session-side article:nth-child(2) small{font-size:12px!important;letter-spacing:.025em!important}
   .session-side article:nth-child(2) p{font-size:13.5px!important;line-height:1.28!important;margin:8px 0 9px!important;font-weight:600!important}
   .session-side article:nth-child(2) a{font-size:13px!important;letter-spacing:.01em!important}
-
   .session-side article:first-child{background-image:url('banner-tagima-signature-na-pratica.png')!important;background-position:center center!important;background-size:110% auto!important;background-repeat:no-repeat!important}
   .session-side article:first-child::before{background:linear-gradient(90deg,rgba(4,8,11,.88) 0%,rgba(4,8,11,.58) 48%,rgba(4,8,11,.08) 100%)!important}
   .session-side article:first-child:hover::before{background:linear-gradient(90deg,rgba(4,8,11,.73) 0%,rgba(4,8,11,.37) 47%,rgba(4,8,11,.02) 100%)!important}
@@ -43,10 +40,10 @@
   .session-side article:nth-child(2):hover::before{background:linear-gradient(90deg,rgba(4,8,11,.72) 0%,rgba(4,8,11,.36) 45%,rgba(4,8,11,.02) 100%)!important}
 }
 
-/* Botão flutuante WhatsApp — ícone redesenhado */
-.float{width:60px!important;height:60px!important;right:22px!important;bottom:22px!important;border-radius:50%!important;background:#25D366!important;color:transparent!important;font-size:0!important;display:grid!important;place-items:center!important;border:0!important;box-shadow:0 10px 28px rgba(0,0,0,.36)!important;transition:transform .2s ease,box-shadow .2s ease,background .2s ease!important;overflow:hidden!important}
-.float::before{content:""!important;display:block!important;width:34px!important;height:34px!important;background-repeat:no-repeat!important;background-position:center!important;background-size:contain!important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='11.5' fill='none' stroke='white' stroke-width='2.2'/%3E%3Cpath d='M10.7 9.9c.5-.6 1.2-.8 1.8-.4l1.5 2.2c.3.5.3 1-.1 1.4l-.9 1c.8 1.8 2.2 3.3 4.1 4.2l1.1-1c.4-.4.9-.4 1.4-.1l2.2 1.4c.5.3.7.9.5 1.5-.5 1.4-1.8 2.4-3.3 2.3-5.6-.4-10.1-4.9-10.5-10.5-.1-.8.1-1.5.6-2Z' fill='white'/%3E%3Cpath d='M7.9 24.4 6.8 28l3.8-1.1' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")!important}
-.float:hover{transform:translateY(-3px) scale(1.06)!important;background:#20c85f!important;box-shadow:0 14px 34px rgba(0,0,0,.42)!important}
+/* Botão flutuante WhatsApp — visual igual à referência */
+.float{width:52px!important;height:52px!important;right:22px!important;bottom:22px!important;border-radius:14px!important;background:linear-gradient(145deg,#16d769,#08b94f)!important;color:transparent!important;font-size:0!important;display:grid!important;place-items:center!important;border:1px solid rgba(255,255,255,.22)!important;box-shadow:0 5px 14px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.20)!important;transition:transform .2s ease,box-shadow .2s ease,filter .2s ease!important;overflow:hidden!important}
+.float::before{content:""!important;display:block!important;width:34px!important;height:34px!important;background-repeat:no-repeat!important;background-position:center!important;background-size:contain!important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='white' d='M16.04 3C8.86 3 3.02 8.82 3.02 15.98c0 2.55.75 5.04 2.16 7.17L3 29l6.02-2.1a13 13 0 0 0 7.01 2.02h.01C23.2 28.92 29 23.1 29 15.94A12.97 12.97 0 0 0 16.04 3Zm0 23.72h-.01a10.8 10.8 0 0 1-5.5-1.5l-.4-.24-3.57 1.25 1.2-3.48-.26-.42a10.75 10.75 0 0 1-1.66-5.75c0-5.93 4.84-10.76 10.8-10.76a10.76 10.76 0 0 1 10.77 10.75c0 5.93-4.84 10.75-10.78 10.75Zm5.9-8.05c-.32-.16-1.9-.94-2.2-1.04-.29-.11-.5-.16-.71.16-.21.32-.82 1.04-1 1.25-.18.21-.37.24-.69.08-.32-.16-1.35-.5-2.58-1.6-.95-.85-1.6-1.9-1.78-2.22-.19-.32-.02-.49.14-.65.14-.14.32-.37.48-.56.16-.19.21-.32.32-.53.1-.21.05-.4-.03-.56-.08-.16-.71-1.71-.97-2.34-.26-.62-.52-.54-.71-.55h-.61c-.21 0-.55.08-.84.4-.29.32-1.1 1.08-1.1 2.63s1.13 3.05 1.29 3.26c.16.21 2.22 3.39 5.38 4.75.75.32 1.34.52 1.8.66.76.24 1.45.21 1.99.13.61-.09 1.9-.78 2.17-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37Z'/%3E%3C/svg%3E")!important}
+.float:hover{transform:translateY(-3px) scale(1.06)!important;filter:brightness(1.06)!important;box-shadow:0 9px 22px rgba(0,0,0,.36),0 0 0 4px rgba(37,211,102,.12)!important}
 
 @media (min-width:1001px) and (max-width:1250px){
   .sessions,.session-grid,.session-photo{min-height:420px!important}
@@ -65,70 +62,16 @@
 }
 
 /* DIRETO DA SOLMUSIC — 5 capas reais dos Reels */
-.reelgrid a{
-  position:relative!important;
-  overflow:hidden!important;
-  isolation:isolate!important;
-  aspect-ratio:2/3!important;
-  background:#070b0f!important;
-  border:1px solid rgba(255,255,255,.08)!important;
-  box-shadow:0 12px 28px rgba(0,0,0,.20)!important;
-  transform:translateY(0) scale(1)!important;
-  transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s ease,border-color .3s ease!important;
-}
-.reelgrid a::before{
-  content:""!important;
-  position:absolute!important;
-  inset:0!important;
-  z-index:0!important;
-  background-position:center!important;
-  background-size:cover!important;
-  background-repeat:no-repeat!important;
-  transform:scale(1)!important;
-  filter:brightness(1)!important;
-  transition:transform .48s cubic-bezier(.2,.8,.2,1),filter .3s ease!important;
-}
-.reelgrid .r1::before{background-image:url('reel-solmusic-01.png')!important}
-.reelgrid .r2::before{background-image:url('reel-solmusic-02.png')!important}
-.reelgrid .r3::before{background-image:url('reel-solmusic-03.png')!important}
-.reelgrid .r4::before{background-image:url('reel-solmusic-04.png')!important}
-.reelgrid .r5::before{background-image:url('reel-solmusic-05.png')!important}
-.reelgrid a::after{
-  content:""!important;
-  position:absolute!important;
-  left:0!important;
-  right:0!important;
-  bottom:0!important;
-  height:3px!important;
-  z-index:3!important;
-  background:#ffc928!important;
-  transform:scaleX(0)!important;
-  transform-origin:left center!important;
-  transition:transform .3s ease!important;
-}
-.reelgrid a>.play,.reelgrid a>div{display:none!important}
-.reelgrid a:hover{
-  transform:translateY(-7px) scale(1.012)!important;
-  border-color:rgba(255,201,40,.82)!important;
-  box-shadow:0 18px 36px rgba(0,0,0,.36),0 12px 28px rgba(255,201,40,.10)!important;
-}
-.reelgrid a:hover::before{transform:scale(1.045)!important;filter:brightness(1.08)!important}
-.reelgrid a:hover::after{transform:scaleX(1)!important}
-@media(max-width:700px){
-  .reelgrid{display:flex!important;overflow-x:auto!important;gap:12px!important;scroll-snap-type:x mandatory!important;padding:2px 2px 12px!important;scrollbar-width:none!important}
-  .reelgrid::-webkit-scrollbar{display:none!important}
-  .reelgrid a{flex:0 0 78%!important;scroll-snap-align:center!important}
-}
+.reelgrid a{position:relative!important;overflow:hidden!important;isolation:isolate!important;aspect-ratio:2/3!important;background:#070b0f!important;border:1px solid rgba(255,255,255,.08)!important;box-shadow:0 12px 28px rgba(0,0,0,.20)!important;transform:translateY(0) scale(1)!important;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s ease,border-color .3s ease!important}
+.reelgrid a::before{content:""!important;position:absolute!important;inset:0!important;z-index:0!important;background-position:center!important;background-size:cover!important;background-repeat:no-repeat!important;transform:scale(1)!important;filter:brightness(1)!important;transition:transform .48s cubic-bezier(.2,.8,.2,1),filter .3s ease!important}
+.reelgrid .r1::before{background-image:url('reel-solmusic-01.png')!important}.reelgrid .r2::before{background-image:url('reel-solmusic-02.png')!important}.reelgrid .r3::before{background-image:url('reel-solmusic-03.png')!important}.reelgrid .r4::before{background-image:url('reel-solmusic-04.png')!important}.reelgrid .r5::before{background-image:url('reel-solmusic-05.png')!important}
+.reelgrid a::after{content:""!important;position:absolute!important;left:0!important;right:0!important;bottom:0!important;height:3px!important;z-index:3!important;background:#ffc928!important;transform:scaleX(0)!important;transform-origin:left center!important;transition:transform .3s ease!important}
+.reelgrid a>.play,.reelgrid a>div{display:none!important}.reelgrid a:hover{transform:translateY(-7px) scale(1.012)!important;border-color:rgba(255,201,40,.82)!important;box-shadow:0 18px 36px rgba(0,0,0,.36),0 12px 28px rgba(255,201,40,.10)!important}.reelgrid a:hover::before{transform:scale(1.045)!important;filter:brightness(1.08)!important}.reelgrid a:hover::after{transform:scaleX(1)!important}
+@media(max-width:700px){.reelgrid{display:flex!important;overflow-x:auto!important;gap:12px!important;scroll-snap-type:x mandatory!important;padding:2px 2px 12px!important;scrollbar-width:none!important}.reelgrid::-webkit-scrollbar{display:none!important}.reelgrid a{flex:0 0 78%!important;scroll-snap-align:center!important}}
 
 /* DIRETO DA SOLMUSIC — cabeçalho simplificado */
 .reels h2{font-size:0!important;display:flex!important;align-items:center!important;gap:0!important;line-height:1!important}
 .reels h2::before{content:"DIRETO DA "!important;display:inline-flex!important;align-items:center!important;min-height:31px!important;padding-left:41px!important;color:#fff!important;font-family:Arial,Helvetica,sans-serif!important;font-size:24px!important;font-style:normal!important;font-weight:800!important;letter-spacing:-.4px!important;background-position:left center!important;background-repeat:no-repeat!important;background-size:30px 30px!important;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='1' x2='1' y2='0'%3E%3Cstop offset='0' stop-color='%23ffbe0b'/%3E%3Cstop offset='.45' stop-color='%23ff006e'/%3E%3Cstop offset='1' stop-color='%23833ab4'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect x='2' y='2' width='28' height='28' rx='8' fill='url(%23g)'/%3E%3Crect x='8.2' y='8.2' width='15.6' height='15.6' rx='4.5' fill='none' stroke='white' stroke-width='2.2'/%3E%3Ccircle cx='16' cy='16' r='4' fill='none' stroke='white' stroke-width='2.2'/%3E%3Ccircle cx='22.2' cy='9.9' r='1.3' fill='white'/%3E%3C/svg%3E")!important}
 .reels h2 em{font-size:24px!important;color:#ffc928!important;font-style:normal!important;font-weight:800!important;letter-spacing:-.4px!important}
-.filters{margin:16px 0 13px!important;display:block!important}
-.filters button{display:none!important}
-.filters::before{content:"ÚLTIMOS REELS"!important;display:inline-block!important;color:#ffc928!important;font-size:10px!important;font-weight:900!important;letter-spacing:.16em!important;text-transform:uppercase!important}
-@media(max-width:700px){
-  .reels h2::before,.reels h2 em{font-size:21px!important}
-  .reels h2::before{min-height:28px!important;padding-left:37px!important;background-size:27px 27px!important}
-  .filters{margin:14px 0 11px!important}
-}
+.filters{margin:16px 0 13px!important;display:block!important}.filters button{display:none!important}.filters::before{content:"ÚLTIMOS REELS"!important;display:inline-block!important;color:#ffc928!important;font-size:10px!important;font-weight:900!important;letter-spacing:.16em!important;text-transform:uppercase!important}
+@media(max-width:700px){.reels h2::before,.reels h2 em{font-size:21px!important}.reels h2::before{min-height:28px!important;padding-left:37px!important;background-size:27px 27px!important}.filters{margin:14px 0 11px!important}}
