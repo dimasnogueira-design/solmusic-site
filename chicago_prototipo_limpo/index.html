@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fender American Ultra II Stratocaster Ultraburst | Protótipo</title>
+  <meta name="description" content="Protótipo estático de página de produto, reconstruído a partir de referência visual." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <div class="notice">FRETE GRÁTIS EM PEDIDOS SELECIONADOS • PROTÓTIPO</div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#" aria-label="Página inicial">SUA LOJA</a>
+      <nav class="desktop-nav">
+        <a href="#">Guitarras</a><a href="#">Baixos</a><a href="#">Pedais</a><a href="#">Amplificadores</a><a href="#">Acessórios</a>
+      </nav>
+      <div class="actions"><button aria-label="Buscar">⌕</button><button aria-label="Conta">◯</button><button id="cartBtn" aria-label="Carrinho">Sacola <span id="cartCount">0</span></button></div>
+    </div>
+  </header>
+
+  <main>
+    <div class="breadcrumbs">Início / Fender / Guitarras Elétricas</div>
+    <section class="product-layout">
+      <div class="gallery">
+        <div class="thumbs" id="thumbs"></div>
+        <button class="hero-wrap" id="heroWrap" aria-label="Ampliar imagem">
+          <img id="heroImg" src="assets/img/produto-1.jpg" alt="Fender American Ultra II Stratocaster Ultraburst" />
+          <span class="zoom">＋</span>
+        </button>
+      </div>
+
+      <aside class="product-info">
+        <div class="eyebrow">NOVA • FENDER</div>
+        <h1>Fender American Ultra II Stratocaster Ultraburst</h1>
+        <div class="rating">★★★★★ <span>Produto demonstrativo</span></div>
+        <div class="price">US$ 2.299,99</div>
+        <div class="installment">Preço de referência da página capturada • ajuste para o catálogo final</div>
+        <div class="meta"><strong>Nº de série:</strong> US240029350</div>
+        <div class="meta"><strong>Peso:</strong> 7 lb 15 oz</div>
+
+        <div class="separator"></div>
+        <label class="label">Quantidade</label>
+        <div class="qty"><button id="minus">−</button><input id="qty" value="1" inputmode="numeric" /><button id="plus">+</button></div>
+        <button class="primary" id="addCart">ADICIONAR AO CARRINHO</button>
+        <button class="secondary" id="whats">FALAR COM UM ESPECIALISTA</button>
+
+        <div class="benefits">
+          <div><b>✓</b><span><strong>Envio seguro</strong><small>Embalagem reforçada para instrumentos</small></span></div>
+          <div><b>✓</b><span><strong>Compra protegida</strong><small>Fluxo demonstrativo para o protótipo</small></span></div>
+          <div><b>✓</b><span><strong>Atendimento</strong><small>Suporte antes e depois da compra</small></span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="details">
+      <div class="tabs"><button class="tab active" data-tab="descricao">Descrição</button><button class="tab" data-tab="specs">Especificações</button><button class="tab" data-tab="envio">Envio e devoluções</button></div>
+      <div id="descricao" class="tabpane active">
+        <h2>Fender American Ultra II Stratocaster</h2>
+        <p>Construída para músicos que procuram desempenho de alto nível, a American Ultra II combina materiais premium, acabamento refinado e recursos modernos. Este conteúdo foi condensado para o protótipo e pode ser substituído pelo texto oficial do catálogo autorizado.</p>
+        <p>O modelo apresenta corpo em alder selecionado, braço em maple quartersawn e perfil Modern “D”, com foco em conforto, precisão e tocabilidade.</p>
+      </div>
+      <div id="specs" class="tabpane">
+        <div class="specgrid">
+          <div><span>Série</span><strong>American Ultra II</strong></div><div><span>Origem</span><strong>Estados Unidos</strong></div>
+          <div><span>Cor</span><strong>Ultraburst</strong></div><div><span>Corpo</span><strong>Select Alder</strong></div>
+          <div><span>Braço</span><strong>Quartersawn Maple</strong></div><div><span>Perfil</span><strong>Modern “D”</strong></div>
+          <div><span>Escala</span><strong>Ebony</strong></div><div><span>Estojo</span><strong>Hard case incluído</strong></div>
+        </div>
+      </div>
+      <div id="envio" class="tabpane"><p>Área reservada para política de frete, prazo, retirada, troca e devolução da loja brasileira. Nenhuma regra da loja original foi mantida como regra comercial deste protótipo.</p></div>
+    </section>
+  </main>
+
+  <footer><div class="footer-grid"><div><div class="brand footer-brand">SUA LOJA</div><p>Protótipo de ecommerce para demonstração.</p></div><div><b>Atendimento</b><a href="#">Contato</a><a href="#">Trocas e devoluções</a><a href="#">Frete</a></div><div><b>Institucional</b><a href="#">Sobre nós</a><a href="#">Privacidade</a><a href="#">Termos</a></div></div></footer>
+
+  <div class="modal" id="modal"><button id="closeModal">×</button><img id="modalImg" alt="Imagem ampliada do produto" /></div>
+  <div class="toast" id="toast">Produto adicionado ao carrinho.</div>
+  <script src="assets/app.js"></script>
+</body>
+</html>

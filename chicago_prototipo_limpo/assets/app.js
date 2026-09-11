@@ -1,0 +1,8 @@
+const imgs=Array.from({length:8},(_,i)=>`assets/img/produto-${i+1}.jpg`);
+const hero=document.getElementById('heroImg'), thumbs=document.getElementById('thumbs');
+imgs.forEach((src,i)=>{const b=document.createElement('button');b.className='thumb'+(i===0?' active':'');b.innerHTML=`<img src="${src}" alt="Vista ${i+1} do produto">`;b.onclick=()=>{hero.src=src;document.querySelectorAll('.thumb').forEach(x=>x.classList.remove('active'));b.classList.add('active')};thumbs.appendChild(b)});
+const qty=document.getElementById('qty'); document.getElementById('plus').onclick=()=>qty.value=Math.max(1,(+qty.value||1)+1);document.getElementById('minus').onclick=()=>qty.value=Math.max(1,(+qty.value||1)-1);
+let cart=0; const toast=document.getElementById('toast'); document.getElementById('addCart').onclick=()=>{cart+=(+qty.value||1);document.getElementById('cartCount').textContent=cart;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800)};
+document.getElementById('whats').onclick=()=>alert('Protótipo: aqui pode entrar o WhatsApp ou chat da loja.');
+document.querySelectorAll('.tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.tab,.tabpane').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.tab).classList.add('active')});
+const modal=document.getElementById('modal'), modalImg=document.getElementById('modalImg');document.getElementById('heroWrap').onclick=()=>{modalImg.src=hero.src;modal.classList.add('open')};document.getElementById('closeModal').onclick=()=>modal.classList.remove('open');modal.onclick=e=>{if(e.target===modal)modal.classList.remove('open')};
