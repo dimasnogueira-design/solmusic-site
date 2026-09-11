@@ -168,9 +168,16 @@
   .date b{margin:0!important;color:#ffc928!important;font-size:28px!important;line-height:1!important}
   .date span{color:#ffc928!important;font-size:9px!important;font-weight:900!important}
 
-  /* Área reservada para futuras artes dos cards laterais.
-     Criar cada arte em 960 x 300 px (proporção 3,2:1). */
-  .session-side article:first-child{background-image:none!important}
+  /* Arte do card Último Vídeo */
+  .session-side article:first-child{
+    background-image:url('banner-tagima-signature-na-pratica.png')!important;
+    background-position:center center!important;
+    background-size:cover!important;
+    background-repeat:no-repeat!important;
+  }
+  .session-side article:first-child::before{
+    background:linear-gradient(90deg,rgba(4,8,11,.92) 0%,rgba(4,8,11,.67) 48%,rgba(4,8,11,.12) 100%)!important;
+  }
   .session-side article:nth-child(2){background-image:none!important}
 }
 
