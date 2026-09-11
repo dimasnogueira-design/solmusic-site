@@ -1,3 +1,5 @@
+@import url('sessions-section.css');
+
 @media(max-width:700px){
   #offers.promo{
     min-height:390px!important;
