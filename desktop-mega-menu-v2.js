@@ -24,7 +24,7 @@
         <div class="mega-col"><h4>Marcas populares</h4><a href="#brands">Tagima</a><a href="#brands">Fender</a><a href="#brands">Gibson</a><a href="#brands">PRS</a><a href="#brands">Ibanez</a><a href="#brands">Epiphone</a><a href="#brands">Squier</a><a href="#brands">Jackson</a><a href="#brands">ESP</a><a href="#brands">Cort</a></div>
         <div class="mega-col"><h4>Modelos populares</h4><a href="#products">Tagima Signature</a><a href="#products">Fender Stratocaster</a><a href="#products">Fender Telecaster</a><a href="#products">Gibson Les Paul</a><a href="#products">PRS Custom 24</a><a href="#products">Ibanez RG</a><a href="#products">Jackson Soloist</a></div>
         <div class="mega-col"><h4>Comprar melhor</h4><a href="#offers">Ofertas</a><a href="#products">Usados</a><a href="#products">Custo-benefício</a><a href="#products">Parcelamento</a><a href="#products">Kits e combos</a><a href="#products">Últimas unidades</a></div>
-        <div class="mega-promos"><a class="mega-promo signature-art" href="#products"><div><span>Tagima Signature</span><small>Conheça a linha →</small></div></a><a class="mega-promo guitar-art" href="#products"><div><span>Encontre sua próxima guitarra</span><small>Ver modelos →</small></div></a></div>`;
+        <div class="mega-promos"><a class="mega-promo signature-art" href="#products" aria-label="Tagima Signature"></a><a class="mega-promo guitar-art" href="#products" aria-label="Sua próxima guitarra"></a></div>`;
     }
 
     const trust=document.querySelectorAll('.trust-grid span');
@@ -57,12 +57,12 @@
         .desktop-mega-menu .mega-col a{color:#e6e8e9!important;background:transparent!important}
         .desktop-mega-menu .mega-col a:hover{color:#ffc928!important;text-decoration:none!important}
         .desktop-mega-menu .mega-col a.mega-accent-link{color:#ffc928!important;font-weight:800!important;margin-top:3px!important}
-        .mega-promos{position:relative!important;gap:16px!important;padding-left:18px!important;padding-right:18px!important}
+        .mega-promos{position:relative!important;gap:14px!important;padding-left:18px!important;padding-right:18px!important;align-content:start!important}
         .mega-promos::after{content:''!important;position:absolute!important;left:18px!important;right:18px!important;top:50%!important;height:1px!important;background:linear-gradient(90deg,transparent,rgba(255,255,255,.10),transparent)!important;transform:translateY(-.5px)!important;pointer-events:none!important}
-        .site-header .nav .desktop-mega-menu .mega-promos .mega-promo.signature-art{background:url('banner-signature.png') center/cover no-repeat!important}
-        .site-header .nav .desktop-mega-menu .mega-promos .mega-promo.guitar-art{background:url('banner-sua-proxima-guitarra.png') center/cover no-repeat!important}
-        .site-header .nav .desktop-mega-menu .mega-promos .mega-promo{min-height:146px!important;border:1px solid #2a2e32!important;box-shadow:none!important}
-        .mega-promo::before{background:linear-gradient(90deg,rgba(0,0,0,.46),rgba(0,0,0,.04))!important}
+        .site-header .nav .desktop-mega-menu .mega-promos .mega-promo{min-height:146px!important;border:1px solid #2a2e32!important;box-shadow:none!important;background-color:#080a0b!important;background-position:center!important;background-repeat:no-repeat!important;background-size:contain!important}
+        .site-header .nav .desktop-mega-menu .mega-promos .mega-promo.signature-art{background-image:url('banner-menu-01.png')!important}
+        .site-header .nav .desktop-mega-menu .mega-promos .mega-promo.guitar-art{background-image:url('banner-menu-02.png')!important}
+        .mega-promo::before{display:none!important}
         .trust-grid .trust-icon{display:grid!important;place-items:center!important;width:24px!important;height:24px!important;flex:0 0 24px!important;color:#17191c!important}
         .trust-grid .trust-icon svg{width:24px!important;height:24px!important;fill:none!important;stroke:currentColor!important;stroke-width:1.7!important;stroke-linecap:round!important;stroke-linejoin:round!important}
         .trust-grid>span>span{font-family:'Manrope',Arial,sans-serif!important;font-size:12px!important;font-weight:600!important;letter-spacing:-.1px!important}
