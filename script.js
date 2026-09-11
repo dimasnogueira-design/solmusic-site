@@ -42,6 +42,19 @@ if(siteHeader){
   }
 }
 
+// Header desktop: fica normal no topo, recolhe após rolar e reabre no hover.
+if(siteHeader&&window.matchMedia("(min-width:1001px)").matches){
+  let desktopHeaderTicking=false;
+  const syncDesktopHeader=()=>{
+    siteHeader.classList.toggle("sm-compact",window.scrollY>90);
+    desktopHeaderTicking=false;
+  };
+  window.addEventListener("scroll",()=>{
+    if(!desktopHeaderTicking){requestAnimationFrame(syncDesktopHeader);desktopHeaderTicking=true;}
+  },{passive:true});
+  syncDesktopHeader();
+}
+
 const oldHero=document.querySelector("section.hero");
 const isMobileHero=window.matchMedia("(max-width:700px)").matches;
 if(oldHero&&!isMobileHero){
