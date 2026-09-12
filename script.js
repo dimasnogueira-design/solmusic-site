@@ -1,4 +1,4 @@
-const WA="https://wa.me/5500000000000";
+const WA="https://wa.me/1238836049";
 const IG="https://www.instagram.com/lojasolmusic/";
 
 ["carousel.css","mobile-header.css","mockup-desktop.css?v=20260911-1","blog-solmusic.css"].forEach(href=>{const link=document.createElement("link");link.rel="stylesheet";link.href=href;document.head.appendChild(link)});
