@@ -43,7 +43,126 @@
     opacity:1!important;
   }
   #offers.promo:active{transform:scale(.992)}
+
+  /* SOLMUSIC CLUB — versão mobile premium */
+  #club.club{
+    height:auto!important;
+    min-height:0!important;
+    margin-top:16px!important;
+    padding:0!important;
+    border-radius:18px!important;
+    overflow:hidden!important;
+    position:relative!important;
+    background:
+      radial-gradient(circle at 82% 18%,rgba(255,201,40,.13),transparent 28%),
+      linear-gradient(145deg,#0a0f14 0%,#080b0f 52%,#121820 100%)!important;
+    border:1px solid rgba(255,255,255,.08)!important;
+    box-shadow:0 16px 36px rgba(0,0,0,.18)!important;
+    color:#fff!important;
+  }
+  #club.club:before{
+    content:""!important;
+    position:absolute!important;
+    inset:0!important;
+    background:linear-gradient(120deg,rgba(255,255,255,.025),transparent 30%,rgba(255,201,40,.035) 72%,transparent)!important;
+    pointer-events:none!important;
+  }
+  #club .club-content{
+    position:relative!important;
+    z-index:1!important;
+    padding:26px 22px 22px!important;
+  }
+  #club .club-content h3{
+    margin:0!important;
+    font-size:27px!important;
+    line-height:1!important;
+    letter-spacing:-.8px!important;
+    font-weight:950!important;
+    color:#fff!important;
+  }
+  #club .club-content h3:after{
+    content:""!important;
+    display:block!important;
+    width:42px!important;
+    height:3px!important;
+    margin-top:11px!important;
+    border-radius:99px!important;
+    background:#ffc928!important;
+  }
+  #club .club-content p{
+    margin:12px 0 18px!important;
+    font-size:13px!important;
+    line-height:1.45!important;
+    color:#b9c1c8!important;
+  }
+  #club .club-icons{
+    display:grid!important;
+    grid-template-columns:repeat(5,minmax(0,1fr))!important;
+    gap:8px!important;
+    margin:0 0 20px!important;
+  }
+  #club .club-icons span{
+    min-width:0!important;
+    padding:10px 4px 9px!important;
+    border:1px solid rgba(255,255,255,.08)!important;
+    border-radius:12px!important;
+    background:rgba(255,255,255,.025)!important;
+    color:#ffc928!important;
+    font-size:18px!important;
+    line-height:1!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:center!important;
+    justify-content:center!important;
+    gap:7px!important;
+  }
+  #club .club-icons small{
+    margin:0!important;
+    font-size:8px!important;
+    line-height:1.15!important;
+    font-weight:700!important;
+    color:#d7dde2!important;
+    text-align:center!important;
+  }
+  #club .btn{
+    width:100%!important;
+    min-height:48px!important;
+    margin:0!important;
+    border:0!important;
+    border-radius:10px!important;
+    background:#ffc928!important;
+    color:#0a0d10!important;
+    font-size:11px!important;
+    font-weight:950!important;
+    letter-spacing:.2px!important;
+    box-shadow:0 8px 22px rgba(255,201,40,.16)!important;
+  }
+  #club .btn:active{transform:scale(.985)!important}
+
+  #club + .products-head{
+    margin-top:30px!important;
+    margin-bottom:16px!important;
+  }
+  #club + .products-head h2{
+    font-size:25px!important;
+    line-height:1.05!important;
+    text-align:center!important;
+    letter-spacing:-.7px!important;
+  }
+  #club + .products-head p{
+    margin-top:7px!important;
+    font-size:12px!important;
+    text-align:center!important;
+    color:#4e555a!important;
+  }
 }
 @media(max-width:390px){
   #offers.promo{border-radius:15px!important}
+  #club.club{border-radius:15px!important}
+  #club .club-content{padding:23px 18px 19px!important}
+  #club .club-content h3{font-size:24px!important}
+  #club .club-icons{gap:6px!important}
+  #club .club-icons span{padding:9px 2px 8px!important;border-radius:10px!important}
+  #club .club-icons small{font-size:7px!important}
+  #club + .products-head h2{font-size:22px!important}
 }
