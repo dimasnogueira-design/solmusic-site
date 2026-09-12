@@ -31,6 +31,33 @@
     transform:translateY(-2px)!important;
     text-shadow:0 3px 12px rgba(0,0,0,.72)!important;
   }
+
+  /* ESCOLHIDOS PELA SOLMUSIC — efeito premium ao passar o mouse */
+  #grid .card{
+    position:relative!important;
+    transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s ease,border-color .28s ease!important;
+    will-change:transform!important;
+  }
+  #grid .card .pic,
+  #grid .card .pic img{
+    transition:transform .32s cubic-bezier(.2,.8,.2,1),filter .32s ease!important;
+  }
+  #grid .card:hover{
+    transform:translateY(-10px) scale(1.012)!important;
+    box-shadow:0 22px 42px rgba(0,0,0,.16)!important;
+    border-color:rgba(255,201,40,.55)!important;
+    z-index:6!important;
+  }
+  #grid .card:hover .pic img{
+    transform:scale(1.035)!important;
+    filter:brightness(1.035) saturate(1.04)!important;
+  }
+  #grid .card:hover .actions a:first-child{
+    transform:translateY(-1px)!important;
+  }
+  #grid .card:hover .actions a:last-child{
+    box-shadow:0 7px 16px rgba(255,201,40,.24)!important;
+  }
 }
 
 @media(max-width:700px){
