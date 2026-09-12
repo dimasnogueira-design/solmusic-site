@@ -1,5 +1,34 @@
 @media(max-width:700px){
-  .top{grid-template-columns:1fr auto!important;grid-template-rows:78px 70px!important}.top .logo{grid-column:1!important;justify-self:start!important}.top .logo-img{width:88px!important;height:62px!important}.mobile-head-actions-v2{grid-column:2!important;justify-content:flex-end!important;pointer-events:auto!important;width:auto!important}.mobile-head-actions-v2 .right{gap:6px!important}.mobile-head-actions-v2 .mobile-icon{width:50px!important;height:50px!important;color:#fff!important;background:transparent!important}.mobile-head-actions-v2 svg{width:31px;height:31px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.mobile-head-actions-v2 .cart svg{width:36px;height:32px}.mobile-head-actions-v2 .cart .m-badge{right:-1px!important;top:0!important;background:#e94e45!important;color:#fff!important;box-shadow:0 0 0 2px #030608}.mobile-menu-btn-right::before{content:'☰'!important;font-size:33px!important;color:#fff!important}.search{height:52px!important;margin:0 0 16px!important;border:1px solid #8d969d!important;border-radius:7px!important}.search input{font-size:18px!important}.search button{width:60px!important;font-size:27px!important;background:#fff!important;color:#05090c!important}.nav{min-height:42px!important;gap:24px!important;padding-bottom:10px!important}.nav a{font-size:14px!important;color:#fff!important}
+  .site-header{background:#050708!important;border-bottom:1px solid #1f272d!important;box-shadow:0 6px 18px rgba(0,0,0,.22)!important}
+  .site-header .top{width:100%!important;min-height:0!important;grid-template-columns:minmax(0,1fr) auto!important;grid-template-rows:68px 50px!important;gap:0 8px!important;padding:0 12px 10px!important;align-items:center!important}
+
+  /* Marca igual ao desktop: símbolo + SolMusic + assinatura */
+  .site-header .top .logo{grid-column:1!important;grid-row:1!important;justify-self:start!important;display:flex!important;align-items:center!important;gap:9px!important;min-width:0!important;width:auto!important;text-decoration:none!important}
+  .site-header .top .logo-img{width:50px!important;height:50px!important;flex:0 0 50px!important;object-fit:contain!important;filter:drop-shadow(0 3px 8px rgba(0,0,0,.28))!important}
+  .site-header .top .logo-copy{display:flex!important;align-items:flex-start!important;min-width:0!important;overflow:visible!important;opacity:1!important;width:auto!important;max-width:none!important;transform:none!important}
+  .site-header .top .logo-copy small{font-size:0!important;line-height:1!important;letter-spacing:0!important;color:transparent!important;white-space:nowrap!important;overflow:visible!important;width:auto!important;height:auto!important}
+  .site-header .top .logo-copy small::before{content:'SolMusic';display:block;color:#f7f7f2!important;font-family:'Manrope',Arial,sans-serif!important;font-size:22px!important;line-height:.96!important;font-weight:800!important;letter-spacing:-1.15px!important;text-transform:none!important}
+  .site-header .top .logo-copy small::after{content:'MÚSICA INSPIRA PESSOAS';display:block;color:#f1f1ed!important;font-family:'Manrope',Arial,sans-serif!important;font-size:5.5px!important;line-height:1!important;font-weight:700!important;letter-spacing:2.05px!important;margin-top:6px!important;white-space:nowrap!important}
+
+  /* Ações em uma única linha, sem pesar o topo */
+  .mobile-head-actions-v2{grid-column:2!important;grid-row:1!important;justify-self:end!important;pointer-events:auto!important;width:auto!important;margin:0!important}
+  .mobile-head-actions-v2 .right{display:flex!important;align-items:center!important;gap:1px!important}
+  .mobile-head-actions-v2 .mobile-icon{width:39px!important;height:39px!important;min-width:39px!important;color:#fff!important;background:transparent!important;border:0!important;padding:0!important;display:grid!important;place-items:center!important}
+  .mobile-head-actions-v2 svg{width:23px!important;height:23px!important;fill:none!important;stroke:currentColor!important;stroke-width:1.8!important;stroke-linecap:round!important;stroke-linejoin:round!important}
+  .mobile-head-actions-v2 .cart svg{width:28px!important;height:25px!important}
+  .mobile-head-actions-v2 .cart .m-badge{right:0!important;top:0!important;width:18px!important;height:18px!important;min-width:18px!important;font-size:10px!important;background:#ef5148!important;color:#fff!important;box-shadow:0 0 0 2px #050708!important}
+  .mobile-menu-btn-right::before{content:'☰'!important;font-size:27px!important;line-height:1!important;color:#fff!important;font-weight:400!important}
+
+  /* Busca compacta logo abaixo da marca */
+  .site-header .search{grid-column:1/-1!important;grid-row:2!important;width:100%!important;height:42px!important;margin:0!important;border:1px solid #353f46!important;border-radius:8px!important;background:#10161a!important;overflow:hidden!important;transition:height .2s ease,opacity .2s ease,margin .2s ease!important}
+  .site-header .search input{font-size:14px!important;color:#f2f4f5!important;background:#10161a!important;padding:0 14px!important}
+  .site-header .search input::placeholder{color:#aeb5ba!important}
+  .site-header .search button{width:48px!important;font-size:22px!important;background:#fff!important;color:#080b0d!important;border:0!important;border-left:1px solid #d9dddf!important}
+  .site-header.mobile-search-collapsed .search{height:0!important;opacity:0!important;margin:0!important;border-width:0!important;pointer-events:none!important}
+  .site-header.mobile-search-collapsed .top{grid-template-rows:64px 0!important;padding-bottom:0!important}
+
+  /* Menu horizontal antigo sai do mobile; tudo fica no hambúrguer */
+  .site-header>.nav{display:none!important}
 
   .mobile-drawer{width:min(89vw,390px)!important;padding:0!important;background:#080d11!important;color:#fff!important;overflow:hidden!important}
   .drawer-premium-head{height:86px;flex:0 0 86px;padding:12px 16px 10px 18px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #242d33;background:#05090c}
@@ -10,4 +39,17 @@
   .drawer-secondary{display:flex;flex-direction:column;border-top:1px solid #273139}.drawer-secondary a{display:flex;align-items:center;justify-content:space-between;min-height:47px;padding:0 7px;border-bottom:1px solid #20292f;font-size:14px;font-weight:700}.drawer-secondary b{font-size:21px;color:#77838b;font-weight:300}.drawer-account{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:18px}.drawer-account a{padding:11px 8px;border:1px solid #364149;border-radius:8px;text-align:center;font-size:12px;font-weight:700;background:#0d1419}
   .mobile-drawer .drawer-wa{flex:0 0 auto;margin:0!important;border-radius:0!important;padding:16px!important;background:#ffc928!important;color:#080b0d!important;font-size:13px!important;letter-spacing:.3px!important}.drawer-wa span{font-size:17px;margin-right:6px}
 }
-@media(max-width:390px){.top{grid-template-rows:72px 66px!important}.top .logo-img{width:80px!important;height:58px!important}.mobile-head-actions-v2 .mobile-icon{width:45px!important;height:45px!important}.mobile-menu-btn-right::before{font-size:30px!important}.mobile-drawer{width:91vw!important}.drawer-premium-head{height:78px;flex-basis:78px}.drawer-brand img{width:55px;height:52px}.drawer-categories a{min-height:51px!important;font-size:15px!important}}
+
+@media(max-width:390px){
+  .site-header .top{grid-template-rows:64px 48px!important;padding-left:10px!important;padding-right:10px!important}
+  .site-header .top .logo{gap:7px!important}
+  .site-header .top .logo-img{width:46px!important;height:46px!important;flex-basis:46px!important}
+  .site-header .top .logo-copy small::before{font-size:20px!important}
+  .site-header .top .logo-copy small::after{font-size:5px!important;letter-spacing:1.75px!important;margin-top:5px!important}
+  .mobile-head-actions-v2 .mobile-icon{width:36px!important;height:36px!important;min-width:36px!important}
+  .mobile-head-actions-v2 svg{width:21px!important;height:21px!important}
+  .mobile-menu-btn-right::before{font-size:25px!important}
+  .site-header .search{height:40px!important}
+  .site-header.mobile-search-collapsed .top{grid-template-rows:60px 0!important}
+  .mobile-drawer{width:91vw!important}.drawer-premium-head{height:78px;flex-basis:78px}.drawer-brand img{width:55px;height:52px}.drawer-categories a{min-height:51px!important;font-size:15px!important}
+}
