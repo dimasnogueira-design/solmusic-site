@@ -17,3 +17,34 @@
   .desktop-banner-dots button.is-active{width:34px;background:#ffc928}
 }
 @media(max-width:1000px){.desktop-banner-carousel{display:none!important}}
+
+/* RESPONSIVE BRIDGE — evita cair no layout legado entre 701px e 1000px */
+@media(min-width:701px) and (max-width:1000px){
+  html,body{overflow-x:hidden!important}
+  .site-header .top{width:100%!important;min-height:74px!important;display:grid!important;grid-template-columns:190px minmax(260px,1fr) auto!important;gap:14px!important;padding:9px 18px!important;align-items:center!important}
+  .site-header .logo{display:flex!important;align-items:center!important;gap:8px!important;min-width:0!important}
+  .site-header .logo-img{width:50px!important;height:50px!important;flex:0 0 50px!important}
+  .site-header .logo-copy{display:flex!important;align-items:center!important;min-width:0!important}
+  .site-header .logo-copy small{font-size:7px!important;line-height:1.45!important;letter-spacing:2.6px!important;font-weight:800!important;white-space:nowrap!important;color:#fff!important}
+  .site-header .search{width:100%!important;max-width:none!important;height:44px!important;justify-self:stretch!important}
+  .site-header .search input{font-size:12px!important}
+  .site-header .tools{justify-content:flex-end!important;gap:8px!important}
+  .site-header .tools .desktop-only,.site-header .theme{display:none!important}
+  .site-header .topwa{display:inline-flex!important;min-height:42px!important;padding:0 14px!important;font-size:10px!important;align-items:center!important;justify-content:center!important;white-space:nowrap!important}
+  .site-header>.nav{display:none!important}
+  .mobile-head-actions-v2{display:none!important}
+  .mobile-banner-carousel{display:block!important;position:relative!important;width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;overflow:hidden!important;background:#050505!important}
+  .mobile-banner-track{display:flex!important;width:100%!important;height:auto!important;overflow-x:auto!important;overflow-y:hidden!important;scroll-snap-type:x mandatory!important;scrollbar-width:none!important}
+  .mobile-banner-track::-webkit-scrollbar{display:none!important}
+  .mobile-banner-slide{display:block!important;flex:0 0 100%!important;width:100%!important;scroll-snap-align:start!important}
+  .mobile-banner-slide img{display:block!important;width:100%!important;height:auto!important;aspect-ratio:4/5!important;object-fit:cover!important;object-position:center!important}
+  .mobile-banner-dots{position:absolute!important;left:50%!important;bottom:14px!important;transform:translateX(-50%)!important;z-index:5!important;display:flex!important;gap:6px!important}
+  .mobile-banner-dots button{width:22px!important;height:3px!important;border:0!important;border-radius:99px!important;background:rgba(255,255,255,.45)!important;padding:0!important}
+  .mobile-banner-dots button.active{width:34px!important;background:#ffc928!important}
+  .hero{display:none!important}
+  .trust-grid{grid-template-columns:repeat(5,minmax(0,1fr))!important;font-size:8px!important;gap:0!important}
+  .trust-grid span{white-space:normal!important;padding:8px 5px!important}
+  .cats{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+  .products{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .duo{grid-template-columns:1fr 1fr!important}
+}
