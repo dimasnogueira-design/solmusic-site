@@ -89,3 +89,29 @@
   s.dataset.solmusicMegaV2='1';
   document.head.appendChild(s);
 })();
+
+// Protótipo: liga todos os cards de produto da home à única página demonstrativa.
+(()=>{
+  const target='produto-fender-american-ultra-ii.html';
+  const linkCards=()=>{
+    document.querySelectorAll('#grid .card').forEach(card=>{
+      const buy=card.querySelector('.actions a:first-child');
+      if(buy) buy.href=target;
+      const pic=card.querySelector('.pic');
+      if(pic&&!pic.dataset.sampleLinked){
+        pic.dataset.sampleLinked='1';
+        pic.style.cursor='pointer';
+        pic.addEventListener('click',()=>location.href=target);
+      }
+      const title=card.querySelector('h3');
+      if(title&&!title.dataset.sampleLinked){
+        title.dataset.sampleLinked='1';
+        title.style.cursor='pointer';
+        title.addEventListener('click',()=>location.href=target);
+      }
+    });
+  };
+  linkCards();
+  const grid=document.getElementById('grid');
+  if(grid)new MutationObserver(linkCards).observe(grid,{childList:true,subtree:true});
+})();
