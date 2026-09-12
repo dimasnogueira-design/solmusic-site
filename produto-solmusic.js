@@ -1,0 +1,11 @@
+const imgs=Array.from({length:8},(_,i)=>`chicago_prototipo_limpo/assets/img/produto-${i+1}.jpg`);
+const hero=document.getElementById('heroImg');
+const thumbs=document.getElementById('thumbs');
+imgs.forEach((src,i)=>{const b=document.createElement('button');b.className='product-thumb'+(i===0?' active':'');b.type='button';b.innerHTML=`<img src="${src}" alt="Vista ${i+1} do produto">`;b.onclick=()=>{hero.src=src;document.querySelectorAll('.product-thumb').forEach(x=>x.classList.remove('active'));b.classList.add('active')};thumbs.appendChild(b)});
+const qty=document.getElementById('qty');document.getElementById('plus').onclick=()=>qty.value=Math.max(1,(+qty.value||1)+1);document.getElementById('minus').onclick=()=>qty.value=Math.max(1,(+qty.value||1)-1);
+let cart=0;const toast=document.getElementById('toast');document.getElementById('addCart').onclick=()=>{cart+=(+qty.value||1);document.getElementById('cartCount').textContent=cart;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),1800)};
+document.getElementById('whats').onclick=()=>alert('Página demonstrativa: o botão será ligado ao WhatsApp oficial da SolMusic.');
+document.querySelectorAll('.product-tab').forEach(b=>b.onclick=()=>{document.querySelectorAll('.product-tab,.product-pane').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById(b.dataset.tab).classList.add('active')});
+const modal=document.getElementById('modal'),modalImg=document.getElementById('modalImg');document.getElementById('heroWrap').onclick=()=>{modalImg.src=hero.src;modal.classList.add('open')};document.getElementById('closeModal').onclick=()=>modal.classList.remove('open');modal.onclick=e=>{if(e.target===modal)modal.classList.remove('open')};
+const siteHeader=document.querySelector('.site-header');if(siteHeader&&window.matchMedia('(min-width:1001px)').matches){let ticking=false;const sync=()=>{siteHeader.classList.toggle('sm-compact',window.scrollY>90);ticking=false};window.addEventListener('scroll',()=>{if(!ticking){requestAnimationFrame(sync);ticking=true}},{passive:true});sync()}
+const search=document.getElementById('search');if(search)search.onsubmit=e=>{e.preventDefault();window.location.href='index.html#products'};
