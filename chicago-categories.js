@@ -11,20 +11,32 @@
   let active=0;
   let raf=0;
   let userInteracting=false;
+  let lastHaptic=0;
 
   const haptic=()=>{
-    if(userInteracting&&'vibrate' in navigator){
-      try{navigator.vibrate(8)}catch(e){}
-    }
+    if(!userInteracting||!('vibrate' in navigator))return;
+    const now=performance.now();
+    if(now-lastHaptic<90)return;
+    lastHaptic=now;
+    try{navigator.vibrate(6)}catch(e){}
+  };
+
+  const tickCard=card=>{
+    card.classList.remove('is-tick');
+    void card.offsetWidth;
+    card.classList.add('is-tick');
+    setTimeout(()=>card.classList.remove('is-tick'),260);
   };
 
   const setActive=(index,{scroll=false,hapticFeedback=true}={})=>{
     const next=Math.max(0,Math.min(cards.length-1,index));
-    if(next===active&&!scroll)return;
     const changed=next!==active;
     active=next;
     cards.forEach((card,i)=>card.classList.toggle('is-active',i===active));
-    if(changed&&hapticFeedback)haptic();
+    if(changed){
+      tickCard(cards[active]);
+      if(hapticFeedback)haptic();
+    }
     if(scroll){
       cards[active].scrollIntoView({behavior:'smooth',inline:'center',block:'nearest'});
     }
@@ -53,15 +65,15 @@
       e.preventDefault();
       userInteracting=true;
       setActive(i,{scroll:true});
-      setTimeout(()=>{userInteracting=false},420);
+      setTimeout(()=>{userInteracting=false},500);
     }
   }));
 
   track.addEventListener('scroll',sync,{passive:true});
   track.addEventListener('touchstart',()=>{userInteracting=true},{passive:true});
-  track.addEventListener('touchend',()=>setTimeout(()=>{userInteracting=false},350),{passive:true});
+  track.addEventListener('touchend',()=>setTimeout(()=>{userInteracting=false},420),{passive:true});
   track.addEventListener('pointerdown',()=>{userInteracting=true},{passive:true});
-  track.addEventListener('pointerup',()=>setTimeout(()=>{userInteracting=false},350),{passive:true});
+  track.addEventListener('pointerup',()=>setTimeout(()=>{userInteracting=false},420),{passive:true});
 
   setActive(0,{hapticFeedback:false});
 })();
