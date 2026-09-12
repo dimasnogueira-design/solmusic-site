@@ -38,8 +38,19 @@
     transition:transform .28s cubic-bezier(.2,.8,.2,1),box-shadow .28s ease,border-color .28s ease!important;
     will-change:transform!important;
   }
-  #grid .card .pic,
+  #grid .card .pic{
+    background:#fff!important;
+    overflow:hidden!important;
+    transform:none!important;
+  }
   #grid .card .pic img{
+    display:block!important;
+    width:100%!important;
+    height:100%!important;
+    object-fit:contain!important;
+    background:#fff!important;
+    transform:scale(1)!important;
+    transform-origin:center center!important;
     transition:transform .32s cubic-bezier(.2,.8,.2,1),filter .32s ease!important;
   }
   #grid .card:hover{
@@ -48,8 +59,12 @@
     border-color:rgba(255,201,40,.55)!important;
     z-index:6!important;
   }
+  #grid .card:hover .pic{
+    transform:none!important;
+    background:#fff!important;
+  }
   #grid .card:hover .pic img{
-    transform:scale(1.035)!important;
+    transform:scale(1.055)!important;
     filter:brightness(1.035) saturate(1.04)!important;
   }
   #grid .card:hover .actions a:first-child{
