@@ -1,7 +1,7 @@
 const WA="https://wa.me/1238836049";
 const IG="https://www.instagram.com/lojasolmusic/";
 
-["carousel.css","mobile-header.css","mockup-desktop.css?v=20260911-1","blog-solmusic.css"].forEach(href=>{const link=document.createElement("link");link.rel="stylesheet";link.href=href;document.head.appendChild(link)});
+["carousel.css?v=20260912-3","mobile-header.css?v=20260912-3","mockup-desktop.css?v=20260912-3","blog-solmusic.css?v=20260912-3"].forEach(href=>{const link=document.createElement("link");link.rel="stylesheet";link.href=href;document.head.appendChild(link)});
 
 // Header mobile: arquitetura própria, preservando o desktop.
 const siteHeader=document.querySelector(".site-header");
