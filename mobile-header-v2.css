@@ -38,6 +38,15 @@
   .drawer-categories{display:flex!important;flex-direction:column!important;gap:4px!important}.drawer-categories a{display:grid!important;grid-template-columns:42px 1fr 20px!important;align-items:center!important;min-height:55px!important;padding:6px 8px!important;border:0!important;border-bottom:1px solid #1d262c!important;color:#fff!important;font-size:16px!important;font-weight:750!important}.drawer-categories a b{justify-self:end;color:#77838b;font-size:25px;font-weight:300}.drawer-icon{width:34px;height:34px;border-radius:8px;background:#131b20;color:#ffc928;display:grid;place-items:center}.drawer-icon svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}.drawer-categories .drawer-offer{color:#ffc928!important}.drawer-categories .drawer-offer .drawer-icon{background:#ffc928;color:#090d10}
   .drawer-secondary{display:flex;flex-direction:column;border-top:1px solid #273139}.drawer-secondary a{display:flex;align-items:center;justify-content:space-between;min-height:47px;padding:0 7px;border-bottom:1px solid #20292f;font-size:14px;font-weight:700}.drawer-secondary b{font-size:21px;color:#77838b;font-weight:300}.drawer-account{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:18px}.drawer-account a{padding:11px 8px;border:1px solid #364149;border-radius:8px;text-align:center;font-size:12px;font-weight:700;background:#0d1419}
   .mobile-drawer .drawer-wa{flex:0 0 auto;margin:0!important;border-radius:0!important;padding:16px!important;background:#ffc928!important;color:#080b0d!important;font-size:13px!important;letter-spacing:.3px!important}.drawer-wa span{font-size:17px;margin-right:6px}
+
+  /* Benefícios mobile: trilho clean e automático (movimento vem do JS existente) */
+  html body .trust{background:#fff!important;border-top:1px solid #ecece8!important;border-bottom:1px solid #ecece8!important;color:#17191b!important;overflow:hidden!important}
+  html body .trust .wrap{width:100%!important;margin:0!important;padding:0!important}
+  html body .trust .wrap .trust-grid{display:flex!important;align-items:stretch!important;gap:0!important;min-height:0!important;padding:0!important;background:#fff!important;overflow-x:auto!important;overflow-y:hidden!important;scroll-snap-type:x mandatory!important;scrollbar-width:none!important;-webkit-overflow-scrolling:touch!important;touch-action:pan-x!important}
+  html body .trust .wrap .trust-grid::-webkit-scrollbar{display:none!important}
+  html body .trust .wrap .trust-grid .trust-card.trust-card{flex:0 0 78vw!important;max-width:310px!important;min-width:220px!important;min-height:58px!important;padding:9px 18px!important;margin:0!important;border:0!important;border-right:1px solid #ecece8!important;border-radius:0!important;background:#fff!important;box-shadow:none!important;display:flex!important;align-items:center!important;gap:12px!important;scroll-snap-align:start!important;font-size:13.5px!important;font-weight:750!important;line-height:1.25!important;color:#151719!important}
+  html body .trust .wrap .trust-grid .trust-card .trust-icon.trust-icon{width:34px!important;height:34px!important;flex:0 0 34px!important;border-radius:50%!important;background:#fff6d8!important;color:#16191b!important;display:grid!important;place-items:center!important}
+  html body .trust .wrap .trust-grid .trust-card .trust-icon svg{width:20px!important;height:20px!important;fill:none!important;stroke:currentColor!important;stroke-width:1.55!important;stroke-linecap:round!important;stroke-linejoin:round!important}
 }
 
 @media(max-width:390px){
@@ -52,4 +61,5 @@
   .site-header .search{height:40px!important}
   .site-header.mobile-search-collapsed .top{grid-template-rows:60px 0!important}
   .mobile-drawer{width:91vw!important}.drawer-premium-head{height:78px;flex-basis:78px}.drawer-brand img{width:55px;height:52px}.drawer-categories a{min-height:51px!important;font-size:15px!important}
+  html body .trust .wrap .trust-grid .trust-card.trust-card{flex-basis:82vw!important;min-width:218px!important;padding-left:16px!important;padding-right:16px!important}
 }
