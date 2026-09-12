@@ -1,3 +1,38 @@
+@media(min-width:701px){
+  #cats .cat{
+    position:relative!important;
+    overflow:hidden!important;
+    transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s ease,filter .45s ease!important;
+    filter:grayscale(1) saturate(.15) brightness(.78)!important;
+    transform:translateZ(0)!important;
+  }
+  #cats .cat::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    background:linear-gradient(180deg,rgba(0,0,0,.04) 35%,rgba(0,0,0,.52) 100%);
+    opacity:.72;
+    transition:opacity .35s ease!important;
+  }
+  #cats .cat b,#cats .cat small{
+    position:relative;
+    z-index:2;
+    transition:transform .35s ease,text-shadow .35s ease!important;
+  }
+  #cats .cat:hover{
+    filter:grayscale(0) saturate(1.08) brightness(1.04)!important;
+    transform:translateY(-6px) scale(1.018)!important;
+    box-shadow:0 18px 34px rgba(0,0,0,.24)!important;
+    z-index:4;
+  }
+  #cats .cat:hover::after{opacity:.42!important}
+  #cats .cat:hover b,#cats .cat:hover small{
+    transform:translateY(-2px)!important;
+    text-shadow:0 3px 12px rgba(0,0,0,.72)!important;
+  }
+}
+
 @media(max-width:700px){
   #cats.catalog{padding-top:26px!important;overflow:hidden!important}
   #cats .section-head{display:block!important;text-align:center!important;margin-bottom:18px!important}
