@@ -1,0 +1,48 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/api/acesso?document=index"
+    },
+    {
+      "source": "/index.html",
+      "destination": "/api/acesso?document=index"
+    },
+    {
+      "source": "/produto-fender-american-ultra-ii.html",
+      "destination": "/api/acesso?document=page1"
+    },
+    {
+      "source": "/produto-fender-american-ultra-ii",
+      "destination": "/api/acesso?document=page1"
+    },
+    {
+      "source": "/chicago_prototipo_limpo/index.html",
+      "destination": "/api/acesso?document=page2"
+    },
+    {
+      "source": "/chicago_prototipo_limpo/",
+      "destination": "/api/acesso?document=page2"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/:path*",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/chicago_prototipo_limpo",
+      "destination": "/chicago_prototipo_limpo/index.html",
+      "permanent": false
+    }
+  ],
+  "framework": null,
+  "outputDirectory": "public"
+}
